@@ -44,8 +44,8 @@
       </li>
  -->     
  
-  <li><a href="aboutus">About us</a></li>
-  <li><a href="contactus">Contact us</a></li>
+  <li><a class="page-scroll" href="<c:url value="aboutus"/>">About us</a></li>
+ <li><a class="page-scroll" href="<c:url value="contactus"/>">Contact us</a></li>
   
  <!--  <li><a href="category">Add category</a></li>
   <li><a href="product">Add Product</a></li>
@@ -78,16 +78,26 @@
     </c:if>
     
 <security:authorize access="hasRole('ROLE_ADMIN')">
+<ul class="nav navbar-nav navbar-right">
 
-<ul>
-<li><a href="${pageContext.request.contextPath}/admin/adding">Add Product</a></li>
-<li><a href="${pageContext.request.contextPath}/admin/productList">Update Product</a></li>
+<c:if test="${pageContext.request.userPrincipal.name!=null}">
+
+<li><a class="page-scroll" href="<c:url value="/admin/adding"/>">Add Product</a></li>
+<li><a class="page-scroll" href="<c:url value="/admin/productList"/>">Update Product</a></li>
+</c:if>
+
 </ul>
-
-
 </security:authorize>
 
+<security:authorize access="hasRole('ROLE_ADMIN')">
 
+<c:if test="${pageContext.request.userPrincipal.name==null}">
+<input type="hidden" name="ADMIN" value="${ROLE_ADMIN }">
+
+</c:if>
+
+</ul>
+</security:authorize>
 
     
     

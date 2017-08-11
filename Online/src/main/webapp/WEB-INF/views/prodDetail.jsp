@@ -18,7 +18,7 @@
 
 <div class="container">
 <div class= "row">
-<div class="col-md-6 item-photo">
+<div class="col-lg-6 item-photo">
 <img src="${pageContext.request.contextPath }/resources/${product.imgname}"
           style="max-width:100% ; margin-top:50px;">
 </div>
@@ -32,17 +32,32 @@
 <label>Stock</label>
 <h5>${product.stock}</h5>
 <label>Vendor</label>
-<h5>${product.sup.supplierName}</h5>
+<h5>${product.sup.name}</h5>
 </div>
-<div class="section">
+<div class="section" style="padding-bottom:20px;">
+
 <form action="${pageContext.request.contextPath }/addToCart" method="post">
 <input type="hidden" value="${product.pid }" name="pid"/>
+<input type="hidden" value="${product.name }" name="name"/><br>
 <input type="hidden" value="${product.price }" name="pPrice"/><br>
 <input type="hidden" value="${product.stock }" name="pStock"/><br>
-<input type="hidden" value="${product.name }" name="name"/><br>
+<input type="hidden" value="${product.sup.name }" name="pSupplier"/><br>
 <input type="hidden" value="${product.imgname }" name="imgname"/><br>
 
-<input type="number" class="form-control" name="quanty" required/><br>
+<input type="number" class="form-control" name="quant" required/><br>
+
+</form>
+<h6><span class="glyphicon-heart-empty" style="cursor:pointer;"></span>Wish List</h6>
+</div></div>
+
+<div class="col-xs-9">
+<ul class="menu-items">
+<li class="active">Details of Product</li>
+</ul>
+<hr><hr>
+<p>All Products are home made</p>
+</div>
+
 <label>Mention quantity of product for purchase:</label>
 
 <input class="btn btn-primary btn-lg" type="submit" value="Add To Cart">

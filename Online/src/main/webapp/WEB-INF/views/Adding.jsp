@@ -29,7 +29,7 @@
 <div class="panel-body">
 <div class="tab-content">
 <div class="tab-pane fade in active" id="tab1primary">
-<form method="post" action="<c:url value="/savecategory"/>"
+<form method="post" action="<c:url value="/admin/savecategory"/>"
 class="form-signin">
 <span id="reauth-email" class="reauth-email"></span>
 <h4 class="input-title">Category ID</h4>
@@ -42,7 +42,7 @@ class="form-signin">
 
 <br>
 <div class="tab-pane fade" id="tab2primary">
-<form method="post" action="<c:url value="/savesupplier"/>"
+<form method="post" action="<c:url value="//admin/savesupplier"/>"
 class="form-signin">
 <span id="reauth-email" class="reauth-email"></span>
 <h4 class="input-title">Supplier ID</h4>
@@ -55,7 +55,7 @@ class="form-signin">
 
 <br>
 <div class="tab-pane fade" id="tab3primary">
-<form method="post" action="<c:url value="/addproduct"/>"  class="form-signin" enctype="multipart/form-data">
+<form method="post" action="<c:url value="/admin/addproduct"/>"  class="form-signin" enctype="multipart/form-data">
 <span id="reauth-email" class="reauth-email"></span>
 <tr>
 <td>Product Name :</td>

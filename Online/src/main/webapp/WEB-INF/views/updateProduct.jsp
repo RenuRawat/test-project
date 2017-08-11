@@ -13,10 +13,17 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/Header.jsp"></jsp:include>
+<br>
+<br><br><br>
+<br>
 <div class="container">
 
-<c:url value="/admin/productUpdate" var="pro"></c:url>
-<form action="productUpdate" method="post" enctype="multipart/form-data">
+
+<%-- <form method="post" enctype="multipart/form-data" action="<c:url value="/productUpdate" var="pro"/>">
+                          "OR"     --%>
+
+<c:url value="/productUpdate" var="pro"></c:url>
+<form action="/admin/productUpdate" method="post" enctype="multipart/form-data">
 <input type="hidden" name="pid" value="${produ.pid }">
 <label>Product Name</label>
 <input type="text" name="pName" value="${produ.name }" required/>

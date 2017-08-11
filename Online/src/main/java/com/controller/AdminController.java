@@ -207,7 +207,7 @@ import com.Model.Supplier;
 	{
 		e.printStackTrace();
 	}
-	    mv.setViewName("redirect:/productList?update");
+	    mv.setViewName("redirect:/admin/productList?update");
 				return mv;
 	   
 		}
@@ -238,7 +238,7 @@ import com.Model.Supplier;
 	public String deleteProduct(@PathVariable("pid") int pid) 
 	{
 	  proDaoImpl.deleteProduct(pid);
-	  return "redirect:/productList?del";
+	  return "redirect:/admin/productList?del";
 	}
 	
 
