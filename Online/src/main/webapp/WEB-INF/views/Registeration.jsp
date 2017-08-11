@@ -2,21 +2,41 @@
 <html>
 <head>
 <title>Registration Page</title>
+
+<style>
+.err{
+color: red;
+}
+.err_bdr {
+border: 1px solid red;
+}
+.bdr {
+  border: 1px solid gray;
+}
+</style>
+
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
+<br>
+<br>
+<br>
 <form:form action="saveregister" method="POST" modelAttribute="user">
+
 
 <table>
     <tr>
+    <td><form:errors path="email" cssClass="err"/><br></td>
         <td>Email :</td>
         <td><form:input path="email" /></td>
     </tr>
     <tr>
+    <td><form:errors path="email" cssClass="err"/><br></td>
         <td>Name :</td>
         <td><form:input path="username" /></td>
     </tr>
     <tr>
+    <td><form:errors path="email" cssClass="err"/><br></td>
         <td>Password :</td>
         <td><form:password path="password" /></td>
     </tr>
@@ -25,10 +45,12 @@
         <td><form:role path="role" /></td>
     </tr> --%>
     <tr>
+    <td><form:errors path="email" cssClass="err"/><br></td>
         <td>Address :</td>
         <td><form:textarea  path="address" /></td>
     </tr>
     <tr>
+    <td><form:errors path="email" cssClass="err"/><br></td>
         <td>Phone :</td>
         <td><form:input path="phone" /></td>
     </tr>

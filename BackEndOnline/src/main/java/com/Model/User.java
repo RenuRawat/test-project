@@ -21,27 +21,29 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	
 	@Email(message="Enter valid Email")
 	@NotEmpty(message="Enter the Email")
-	 private String email;
+	private String email;
 	
 	@NotEmpty(message="Enter the Username")
-	@Column(name = "username")
+	
 	 private String username;
 	
 	@NotNull(message="Password is Null")
+	@Size(min=6 , max=12 , message="password lenght should be more than 6 and less than 12")
 	 private String password;
 	
 	 private String role;
+	
 	 @NotNull(message="Address is Null")
 	 private String address;
 	 
 	
-	 @Pattern(regexp="[\\d] {10}", message="Please enter digits")
+	 @Pattern(regexp="^(0|[1-9][0-9]*)$" , message="please enter digits")
 	 @NotNull
-	 @Size(min=8, max=10, message="Enter correct Phone")
+	 @Size(min=8, max=10, message="Enter correct number")
 	 private String phone;
+	 
 	 private boolean enable = true;
 	 
 	 

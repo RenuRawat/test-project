@@ -7,13 +7,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.DaoImpl.CatDaoImpl;
 import com.DaoImpl.ProDaoImpl;
 import com.DaoImpl.UserDaoImpl;
+import com.Model.Product;
 import com.Model.User;
 
 
@@ -26,6 +29,8 @@ public class HomeController {
 	 ProDaoImpl proDaoImpl;
 	@Autowired
 	 CatDaoImpl catDaoImpl;
+	@Autowired
+	 CatDaoImpl supDaoImpl;
 	
 //////////////////////////////////////////////	
 	@RequestMapping("/login")
@@ -66,6 +71,10 @@ public String aboutus() {
 @RequestMapping("/contactus")
 public String contactus() {
 	return "ContactUs";
+	}
+@RequestMapping("/forget")
+public String forget() {
+	return "ForgetPassword";
 	}
 
 
@@ -113,7 +122,7 @@ public ModelAndView saveregister(@Valid @ModelAttribute("user") User user, Bindi
 	}
 
 ///////////////////////////////////
-/*@RequestMapping(value="/productCustList") 
+@RequestMapping(value="/productCustList") 
 public ModelAndView productCustList(@RequestParam("cid") int cid) 
   {
 	System.out.println(cid);
@@ -121,7 +130,7 @@ public ModelAndView productCustList(@RequestParam("cid") int cid)
 	mav.addObject("productList", proDaoImpl.getProById(cid));
 	mav.setViewName("ProductCustomerList");
 	return mav;
-	}*/
+	}
 
 
 
@@ -130,6 +139,17 @@ public void addAttributes(Model m)
 {
 m.addAttribute("catList",catDaoImpl.retrieve());
 m.addAttribute("proList",proDaoImpl.retrieve());
-	
-}
+m.addAttribute("satList",supDaoImpl.retrieve());}
+
+
+@RequestMapping(value="/prodDetail/{cid}") 
+public ModelAndView prodDet(@PathVariable("cid") int cid) 
+  {
+	ModelAndView mv= new ModelAndView();
+	Product product=proDaoImpl.findById(cid);
+	mv.addObject("product", product);
+	mv.setViewName("prodDetail");
+	return mv;
+	}
+
 }

@@ -20,13 +20,12 @@
 <div class="card card-container">
 <h2 class='login_title text-center'>Login</h2>
 <hr>
-
-<form action="${pageContext.request.contextPath }/login" class="form-signin" method="post" />
+<form action="${pageContext.request.contextPath }/login" class="form-signin" method ="post">
 <span id="reauth-email" class="reauth-email"></span>
 <h4 class="input-title">Email</h4>
 <input type="text" id="inputEmail" name="username" class="login_box" placeholder="email" required />
 <h4 class="input-title">Password</h4>
-<input type="password" id="inputPassword" name="password" class="login_box" placeholder="********" required />
+<input type="password" id="inputPassword" name="password" class="login_box" placeholder= "********" required />
 
 <div id="remember" class="checkbox">
 <label>
@@ -34,38 +33,17 @@
 </label>
 </div>
 <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
-<button class="btn btn-lg btn-primary" type="submit">Login</button>
-<button class="btn btn-lg btn-primary" type="reset">Cancel</button>   
+<button class="btn btn-md btn-primary" type="submit">Login</button>
+<button class="btn btn-md btn-primary" type="reset">Cancel</button>   
+<br>
+<h4><a href="${pageContext.request.contextPath}/register" >Create an account</a></h4>
+               
 </form>
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 </div>
 
 
 
-
-
-
-<%-- <table>
-  
-    <tr>
-        <td>User Name :</td>
-        <td><form:input path="name" /></td>
-    </tr>
-    <tr>
-        <td>Password :</td>
-        <td><form:password path="password" /></td>
-    </tr>
-  
-  
-  
-    <tr>
-        <td colspan="2"><input type="submit" value="Login"></td>
-    </tr>
-</table>
-</form:form> --%>
-
-
-  
 
 
 <br><br>

@@ -42,16 +42,16 @@ public class ProDaoImpl {
 		return list;
 	}
 	
-	
+	/////////////CustomerList///////////////////
 
-/*	public List<Product> getProById(int cid) {
+	public List<Product> getProById(int cid) {
 	Session session= sessionFactory.openSession();
 	List<Product> products =null;
 	session.beginTransaction();
-	products = session.createQuery("from product where cid="+ cid).list();
+	products = session.createQuery("from Product where cid="+ cid).list();
 	session.getTransaction().commit();
 	return products;
-	}*/
+	}
 	
 
 	public Product findById(int pid) {
@@ -93,6 +93,8 @@ public class ProDaoImpl {
 		// TODO Auto-generated method stub
 		
 	}
+
+
 
 /*	public void updateProduct(Product pro2) {
 		// TODO Auto-generated method stub

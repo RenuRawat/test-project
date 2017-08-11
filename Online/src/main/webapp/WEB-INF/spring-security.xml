@@ -18,6 +18,7 @@ http://www.springframework.org/schema/context
  <security:intercept-url pattern="/webapp/resources/**" access="permitAll"/>
  <security:intercept-url pattern="/login" access="permitAll"/>
  <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+
  
  <security:form-login
  login-page="/login"

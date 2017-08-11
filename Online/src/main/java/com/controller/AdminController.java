@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +43,7 @@ import com.Model.Supplier;
 	
 	@RequestMapping("/adding")
 	public String addPage()
-	{  return "Admin";  }
+	{  return "Adding";  }
 	
 	
 /*	@RequestMapping(value="/category", method = RequestMethod.GET) 
@@ -165,7 +165,7 @@ import com.Model.Supplier;
 	   
 		}
 	
-	@RequestMapping(value="/admin/productUpdate", method = RequestMethod.POST) 
+	@RequestMapping(value="/productUpdate", method = RequestMethod.POST) 
 	public ModelAndView editProduct(HttpServletRequest request, @RequestParam("file") MultipartFile file)
   {    ModelAndView mv = new ModelAndView();
     
@@ -207,7 +207,7 @@ import com.Model.Supplier;
 	{
 		e.printStackTrace();
 	}
-	    mv.setViewName("redirect:/admin/productList?update");
+	    mv.setViewName("redirect:/productList?update");
 				return mv;
 	   
 		}
@@ -234,11 +234,11 @@ import com.Model.Supplier;
 		return mav;
 	}
 	
-	@RequestMapping("/admin/deleteProduct/{pid}")
+	@RequestMapping("/deleteProduct/{pid}")
 	public String deleteProduct(@PathVariable("pid") int pid) 
 	{
 	  proDaoImpl.deleteProduct(pid);
-	  return "redirect:/admin/productList?del";
+	  return "redirect:/productList?del";
 	}
 	
 

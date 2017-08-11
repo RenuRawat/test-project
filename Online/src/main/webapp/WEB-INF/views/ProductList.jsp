@@ -8,6 +8,7 @@
   <title>Product List</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -42,9 +43,9 @@
 <td><img src="${pageContext.request.contextPath}/resources/${c.imgname}"  height="60px" width="60px"></td>
 <td class="span4">
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
-<a class="btn btn-info" role="button" href="<c:url value="/admin/deleteProduct/${c.pid}"/>">Delete</a>
+<a class="btn btn-info" role="button" href="<c:url value="/deleteProduct/${c.pid}"/>">Delete</a>
 <br>
-<a class="btn btn-info" role="button" href="${contextRoot }/admin/updateProduct?pid=<c:out value="${c.pid}"> </c:out>">Update</a>
+<a class="btn btn-info" role="button" href="${contextRoot }/updateProduct?pid=<c:out value="${c.pid}"> </c:out>">Update</a>
 </td></tr>
 </c:forEach>
 
