@@ -15,11 +15,15 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.DaoImpl.CartDaoImpl;
 import com.DaoImpl.CatDaoImpl;
+import com.DaoImpl.OrdersDaoImpl;
 import com.DaoImpl.ProDaoImpl;
 import com.DaoImpl.SupDaoImpl;
 import com.DaoImpl.UserDaoImpl;
+import com.Model.Cart;
 import com.Model.Category;
+import com.Model.Orders;
 import com.Model.Product;
 import com.Model.User;
 import com.Model.Supplier;
@@ -66,6 +70,8 @@ sessionBuilder.addAnnotatedClass(User.class);
 sessionBuilder.addAnnotatedClass(Category.class);
 sessionBuilder.addAnnotatedClass(Product.class);
 sessionBuilder.addAnnotatedClass(Supplier.class);
+sessionBuilder.addAnnotatedClass(Cart.class);
+sessionBuilder.addAnnotatedClass(Orders.class);
 
 //sessionBuilder.scanPackages("com.model");
 return sessionBuilder.buildSessionFactory();
@@ -100,6 +106,20 @@ return new ProDaoImpl(sessionFactory);
 public SupDaoImpl getSupDAO(SessionFactory sessionFactory)
 {
 return new SupDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="CartDaoImpl")
+public CartDaoImpl getCartDAO(SessionFactory sessionFactory)
+{
+return new CartDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="OrdersDaoImpl")
+public OrdersDaoImpl getOrdersDAO(SessionFactory sessionFactory)
+{
+return new OrdersDaoImpl(sessionFactory);
 }
 
 

@@ -89,10 +89,10 @@ public class ProDaoImpl {
 	    session.getTransaction().commit();
 	}
 
-	public void saveProduct(Product pro2) {
+/*	public void saveProduct(Product pro2) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
 
 

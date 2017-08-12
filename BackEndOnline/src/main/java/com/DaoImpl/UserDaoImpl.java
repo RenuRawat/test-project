@@ -1,6 +1,9 @@
 package com.DaoImpl;
 
+import com.Model.Product;
 import com.Model.User;
+
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +30,28 @@ public class UserDaoImpl implements UserDao{
 		  session.getTransaction().commit();
 	}
 
+	public User findById(String userEmail) {
+		
+			Session session= sessionFactory.openSession();
+			User u =null;
+			try {
+			session.beginTransaction();
+			u = session.get(User.class, userEmail);
+			session.getTransaction().commit();
+			}
+			catch (HibernateException ex)
+			{
+			 ex.printStackTrace();
+			 session.getTransaction().rollback(); // It will not fetch the Id
+			}
+			return u;
+			}
+	}
+	
+	
+	
+	
+	
 
-}
+
+

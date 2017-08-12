@@ -46,7 +46,11 @@
 
 <input type="number" class="form-control" name="quant" required/><br>
 
+<label>Mention quantity of product for purchase:</label><br>
+<input class="btn btn-primary btn-lg" type="submit" value="Add to cart">
+
 </form>
+
 <h6><span class="glyphicon-heart-empty" style="cursor:pointer;"></span>Wish List</h6>
 </div></div>
 
@@ -54,22 +58,21 @@
 <ul class="menu-items">
 <li class="active">Details of Product</li>
 </ul>
-<hr><hr>
+<hr>
 <p>All Products are home made</p>
 </div>
 
-<label>Mention quantity of product for purchase:</label>
 
-<input class="btn btn-primary btn-lg" type="submit" value="Add To Cart">
+
+<%-- <input class="btn btn-primary btn-lg" type="submit" value="Add To Cart">
 </form>
 </div>
 <div class="col-sm-9">
 <label><h3>Description</h3></label>
 <hr></hr>
 <p>The Products are all hand-made and certified by Food corporation of India.</p>
-</div>
-</div>
-</div>
+</div> --%>
+
 
 </body>
 </html>
