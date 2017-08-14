@@ -15,10 +15,11 @@
 <jsp:include page="Header.jsp"></jsp:include>
 <br><br><br>
 <div class="container">
-<h4><img src"${pageContext.request.contextPath }/images/icon.png"> &nbsp; YOUR CART</h4>
+<h4><img src="images/cart.png" style="width:15%;"> &nbsp; YOUR CART</h4>
 <table id="cart" class="table table-hover table-condensed">
 <thread> 
 <tr>
+<th>Sr.no.</th>
 <th>Product Name</th>
 <th>Quantity</th>
 <th>price</th>
@@ -35,16 +36,34 @@
 
 <c:forEach var="c" varStatus="st" items="${cartInfo }">
 <tr>
+<td><c:out value="${st.count }"></c:out></td>
 <td><c:out value="${c.cartProductName }"></c:out></td>
 <td><c:out value="${c.cartQuantity }"></c:out></td>
 <td><c:out value="${c.cartPrice }"></c:out></td>
 
-<td><img src="${pageContext.request.contextPath }/resources/<c:out value='${c.cartImage }'></c:out>"></td>
+
+<td><img src="${pageContext.request.contextPath }/resources/${c.cartImage }" height="30px" width="30px"></td>
+
 <td><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></td>
 <td><a href="${pageContext.request.contextPath }/deleteCart/${c.cartId}" class="btn btn-danger btn-sm"></a></td>
 <c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity }"></c:set>
 </tr>
 </c:forEach>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%-- <tr>
 <td><span class="col-lg-5"><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></span></td>
@@ -53,8 +72,8 @@
 
 
 <tr>
-<label>Grand Total</label>
-<td><span class="col-lg-9" align="right"><c:out value="${gtot }"></c:out></span></td>
+
+<td><span class="col-lg-9" align="right"><label>Grand Total</label><c:out value="${gtot }"></c:out></span></td>
 </tr>
 </tbody>
 

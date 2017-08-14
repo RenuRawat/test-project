@@ -36,7 +36,8 @@ public class Cart implements Serializable {
 	
 	
 ////using constructor for non inserting data//////////////
-/*	public Cart(int cartId, int cartProductID, User cartUserDetails, Double cartPrice, int cartQuantity, String cartImage, String cartProductName)
+	public Cart(int cartId, int cartProductID, User cartUserDetails, Double cartPrice, int cartQuantity, 
+			String cartImage, String cartProductName)
 	{
 		this.cartId= cartId;
 		this.cartProductID= cartProductID;
@@ -46,8 +47,13 @@ public class Cart implements Serializable {
 		this.cartImage =cartImage;
 		this.cartProductName =cartProductName;
 	}
-	*/
 	
+	
+	public Cart() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getCartId() {
 		return cartId;
 	}

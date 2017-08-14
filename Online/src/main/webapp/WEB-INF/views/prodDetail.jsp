@@ -18,7 +18,7 @@
 
 <div class="container">
 <div class= "row">
-<div class="col-lg-6 item-photo">
+<div class="col-md-6 item-photo">
 <img src="${pageContext.request.contextPath }/resources/${product.imgname}"
           style="max-width:100% ; margin-top:50px;">
 </div>
@@ -37,7 +37,7 @@
 <div class="section" style="padding-bottom:20px;">
 
 <form action="${pageContext.request.contextPath }/addToCart" method="post">
-<input type="hidden" value="${product.pid }" name="pid"/>
+<input type="hidden" value="${product.pid }" name="pId"/>
 <input type="hidden" value="${product.name }" name="name"/><br>
 <input type="hidden" value="${product.price }" name="pPrice"/><br>
 <input type="hidden" value="${product.stock }" name="pStock"/><br>

@@ -32,7 +32,7 @@
 <table class="tbdetail">
 <tr>
 <td colspan="3"><b>Name</b></td>
-<td>${user.name}</td>
+<td>${user.username}</td>
 </tr>
 <tr>
 <td colspan="3"><b>Email</b></td>
@@ -49,7 +49,7 @@
 
 </table>
 <table>
-<tr><th colspan="2">Expiry</th>
+<tr><th colspan="2">Expire</th>
 <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
 <th>CVV</th></tr>
 <tr>

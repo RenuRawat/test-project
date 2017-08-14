@@ -28,6 +28,7 @@ public class CartDaoImpl {
 			  
 			  // value get nd set from the User(Getter ns Setter method////
 			  session.save(cart);
+			  
 			  session.getTransaction().commit();	
 		  }
 	  
@@ -38,7 +39,9 @@ public class CartDaoImpl {
 			List<Cart> cr =null;
 			try {
 			session.beginTransaction();
-			cr =(List<Cart>) session.createQuery("from Cart where userMailId=: email").setString("email", userId).list();
+			System.out.println("queryfind");
+			cr =(List<Cart>) session.createQuery("from Cart where userMailId= :email").setString("email", userId).list();
+			System.out.println("queryfind2");
 			session.getTransaction().commit();
 			}
 			catch (HibernateException ex)
@@ -51,13 +54,16 @@ public class CartDaoImpl {
 			
 		
 			
+			@SuppressWarnings("deprecation")
 			public Cart getCartById(int pid, String userEmail) 
 			{
 				Session session= sessionFactory.openSession();
 				Cart cr =null;
 				session.beginTransaction();
-				cr = (Cart)session.createQuery("from Cart where userMailId= :email and cartProductID =id")
+				//System.out.println("query1");
+				cr = (Cart)session.createQuery("from Cart where userMailId= :email and cartProductID =:id")
 						.setString("email" ,userEmail).setInteger("id", pid).uniqueResult();
+				//System.out.println("query1");
 				session.getTransaction().commit();
 				return cr;
 				}
@@ -68,6 +74,7 @@ public class CartDaoImpl {
 			    session.beginTransaction();
 			    Cart cr =(Cart) session.get(Cart.class, cartId);
 			    session.delete(cr);
+			  System.out.println("delete");
 			    session.getTransaction().commit();
 				
 			}

@@ -23,7 +23,7 @@
                           "OR"     --%>
 
 <c:url value="/productUpdate" var="pro"></c:url>
-<form action="/admin/productUpdate" method="post" enctype="multipart/form-data">
+<form action="${pageContext.request.contextPath}/admin/productUpdate" method="post" enctype="multipart/form-data">
 <input type="hidden" name="pid" value="${produ.pid }">
 <label>Product Name</label>
 <input type="text" name="pName" value="${produ.name }" required/>
