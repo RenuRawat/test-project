@@ -36,7 +36,7 @@
 </div>
 <div class="section" style="padding-bottom:20px;">
 
-<form action="${pageContext.request.contextPath }/addToCart" method="post">
+<form action="${pageContext.request.contextPath }/cart/addToCart" method="post">
 <input type="hidden" value="${product.pid }" name="pId"/>
 <input type="hidden" value="${product.name }" name="name"/><br>
 <input type="hidden" value="${product.price }" name="pPrice"/><br>
@@ -44,10 +44,13 @@
 <input type="hidden" value="${product.sup.name }" name="pSupplier"/><br>
 <input type="hidden" value="${product.imgname }" name="imgname"/><br>
 
+<security:authorize access="hasRole('ROLE_USER')">
+
 <input type="number" class="form-control" name="quant" required/><br>
 
 <label>Mention quantity of product for purchase:</label><br>
 <input class="btn btn-primary btn-lg" type="submit" value="Add to cart">
+</security:authorize>
 
 </form>
 

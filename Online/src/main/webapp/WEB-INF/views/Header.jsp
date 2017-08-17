@@ -46,7 +46,11 @@
 
     <li><a>Welcome:${pageContext.request.userPrincipal.name}</a></li>
     <li><a href="<c:url value="/logout"/>">Logout</a></li>
-    <li><a href="${pageContext.request.contextPath}/goToCart">My Cart <i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+    <security:authorize access="hasRole('ROLE_USER')">
+    
+    <li><a href="${pageContext.request.contextPath}/cart/goToCart">My Cart <i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+    </security:authorize>
+
     </c:if>
     </ul></div>
     

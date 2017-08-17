@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p><h2>Error Page!!!<a href="/index">Go to Home</a></h2>
+<p><h2>Error Page!!!<a href="${pageContext.request.contextPath}/index">Go to Home</a></h2>
 </body>
 </html>

@@ -32,15 +32,20 @@ public class HomeController {
 	@Autowired
 	 CatDaoImpl supDaoImpl;
 	
+	@Autowired
+	 CatDaoImpl countryDaoImpl;
+	@Autowired
+	 CatDaoImpl stateDaoImpl;
+	
 //////////////////////////////////////////////	
 	@RequestMapping("/login")
 	public String login() {
 		return "Login";
 		}	
 	
-	@RequestMapping("/userlogged")
+	@RequestMapping("/userLogged")
 	public String userlogged() {
-		return "redirect:/index";
+		return "redirect:index";
 		}
 	
 	@RequestMapping("/error")

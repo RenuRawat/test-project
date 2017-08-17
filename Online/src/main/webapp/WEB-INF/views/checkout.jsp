@@ -23,13 +23,15 @@
 <div class="outer">
 <div class="well" style="width:100%">
 <form action="${pageContext.request.contextPath}/invoiceprocess" method="post">
-<c:set var="srk2" value="0"></c:set>
-<c:forEach var="c" items="${cart }">
-<c:set var="srk2" value="${srk2 + c.cartPrice * c.cartQuantity }"></c:set>
+
+<c:set var="gtot" value="0"></c:set>
+<c:forEach var="c" items="${cart}">
+<c:set var="gtot" value="${gtot + c.cartPrice * c.cartQuantity }"></c:set>
 </c:forEach>
 
 <div class="well">
 <table class="tbdetail">
+
 <tr>
 <td colspan="3"><b>Name</b></td>
 <td>${user.username}</td>
@@ -43,22 +45,43 @@
 <td>${user.phone}</td>
 </tr>
 <tr>
-<td colspan="3"><b>Customer Address</b></td>
-<td>${user.address}</td>
+<td colspan="3"><b>Customer Amount</b></td>
+<td>${gtot}</td>
 </tr>
 
-</table>
+
+</table></div>
+
+<div style="margin-top:10px">
+<h3><strong>Enter Card Details</strong></h3>
+</div>
+<input type="hidden" name="total" value="${gtot}">
+<div class="well">
+<label>Payment</label><br>
+<select name="payment">
+<option value="NetBanking">Net Banking</option>
+<option value="COD">Cash on Delivery</option>
+</select>
+<div>
+<br>
+</div>
+<input type="text" name="cardnum" placeholder="Enter your card number" style="width:70%"><br><br>
+<input type="text" name="name" placeholder="Name on the card" style=",argin-bottom:10px; width:30%"><br>
+<div>
 <table>
 <tr><th colspan="2">Expire</th>
-<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-<th>CVV</th></tr>
 <tr>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>CVV</th>
+ <td><input path="number" name="cvv"></td></tr>
+ <tr>
 <td colspan="2"> 
-<input type="number" min="1" max="12" name="month" palacholder="mm" style="width:50%">
-<input type="number" min="1" max="12" name="month" palacholder="yy" style="width:50%"></td>
+<input type="text" min="1" max="31" name="month" placeholder="mm" style="width:50%">
+<input type="text" min="2016" max="2030" name="year" placeholder="yy" style="width:50%"></td>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-
+</tr>
 </table>
+</div>
 </div></div>     <!-- inner end card number -->
 <input type="submit" value="PROCEED" style="width:75%; font-size:20px;" class="btn btn-success">
 </form>

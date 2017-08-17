@@ -17,7 +17,7 @@
 <div class="container">
 <h4><img src="images/cart.png" style="width:15%;"> &nbsp; YOUR CART</h4>
 <table id="cart" class="table table-hover table-condensed">
-<thread> 
+<thead> 
 <tr>
 <th>Sr.no.</th>
 <th>Product Name</th>
@@ -26,7 +26,7 @@
 <th>Image</th>
 <th>Total</th>
 <th>Action</th>
-</tr></thread>
+</tr></thead>
 
 <tbody>
 <c:if test="${empty cartInfo }">
@@ -45,29 +45,11 @@
 <td><img src="${pageContext.request.contextPath }/resources/${c.cartImage }" height="30px" width="30px"></td>
 
 <td><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></td>
-<td><a href="${pageContext.request.contextPath }/deleteCart/${c.cartId}" class="btn btn-danger btn-sm"></a></td>
+<td><a href="${pageContext.request.contextPath }/deleteCart/${c.cartId}" class="btn btn-danger btn-md">Delete</a></td>
 <c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity }"></c:set>
 </tr>
 </c:forEach>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%-- <tr>
-<td><span class="col-lg-5"><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></span></td>
-</tr> --%>
 
 
 

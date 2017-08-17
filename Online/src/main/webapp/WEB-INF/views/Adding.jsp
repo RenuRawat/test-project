@@ -18,13 +18,13 @@
 <br></div> 
 <div class="container">
 <div class="row">
-<div clss="col-md-6">
+<div class="col-md-6">
 <div class="panel with-nav-tabs panel-primary">
 <div class="panel-heading">
 <ul class="nav nav-tabs">
-<li class="active"><a href="#tab1primary" data-toggle="tab">Category</a></li>
-<li><a href="#tab2primary" data-toggle="tab">Supplier</a></li>
-<li><a href="#tab3primary" data-toggle="tab">Products</a></li>
+<li class="active"><a href= "#tab1primary" class="btn btn-lg btn-primary" data-toggle="tab">Category</a></li>
+<li><a href="#tab2primary" class="btn btn-lg btn-primary" data-toggle="tab">Supplier</a></li>
+<li><a href="#tab3primary" class="btn btn-lg btn-primary" data-toggle="tab">Products</a></li>
 </ul></div></div>                                                                                                
 <div class="panel-body">
 <div class="tab-content">
@@ -35,48 +35,41 @@ class="form-signin">
 <h4 class="input-title">Category ID</h4>
 <input class="form-control" type="number" name="cid" required />
 <h4 class="input-title">Category Name</h4>
-<input class="form-control" type="text" name="name" required />
+<input class="form-control" type="text" name="name" required /><br>
 <button class="btn btn-lg btn-primary" type="submit">Save</button>
 <button class="btn btn-lg btn-primary" type="reset">Cancel</button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 </form></div>
 
-<br>
+
 <div class="tab-pane fade" id="tab2primary">
-<form method="post" action="<c:url value="//admin/savesupplier"/>"
+<form method="post" action="<c:url value="/admin/savesupplier"/>"
 class="form-signin">
 <span id="reauth-email" class="reauth-email"></span>
 <h4 class="input-title">Supplier ID</h4>
 <input class="form-control" type="number" name="sid" required />
 <h4 class="input-title">Supplier Name</h4>
-<input class="form-control" type="text" name="name" required />
+<input class="form-control" type="text" name="name" required /><br>
 <button class="btn btn-lg btn-primary" type="submit">Save</button>
 <button class="btn btn-lg btn-primary" type="reset">Cancel</button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 </form></div> 
 
-<br>
+
 <div class="tab-pane fade" id="tab3primary">
 <form method="post" action="<c:url value="/admin/addproduct"/>"  class="form-signin" enctype="multipart/form-data">
 <span id="reauth-email" class="reauth-email"></span>
-<tr>
-<td>Product Name :</td>
-<td><input type="text" name="pName" required /></td>
-</tr>
-<tr>
-<td>Product Description :</td>
-<td><input type="text" name="pDescription" /></td>
-</tr>
-<tr>                                                                                                                         
-<td>Product Price :</td>
-<td><input type="text" name="pPrice" /></td>
-</tr>
 
-<tr>                                                                                                                       
-<td>Product Stock :</td>
-<td><input type="text" name="pStock" /></td>
-</tr>
- 
+<h4 class="input-title">Product Name</h4>
+<input class="form-control" type="text" name="pName" required />
+<h4 class="input-title">Product Description</h4>
+<input class="form-control" type="text" name="pDescription" required />
+<h4 class="input-title">Product Price</h4>
+<input class="form-control" type="text" name="pPrice" required />
+<h4 class="input-title">Product Stock</h4>
+<input class="form-control" type="text" name="pStock" required />
+
+
 <div class="form-group">
-<td>Select Category</td>
+<td><h4 class="input-title">Select Category</h4></td>
 <td><select class="form-control" name="pCategory" required>
 <option>----Category----</option> 
 <c:forEach items="${catList}" var="cat"> 
@@ -86,7 +79,7 @@ class="form-signin">
 </div>
  
  <div class="form-group">
-<td>Select Supplier</td>
+<td><h4 class="input-title">Select Supplier</h4></td>
 <td><select class="form-control" name="pSupplier" required>
 <option>----Supplier----</option> 
 <c:forEach items="${supList}" var="sup">
@@ -94,14 +87,14 @@ class="form-signin">
 </c:forEach>
 </select>
 </div>
-<br> 
+ 
 <div class="fileinput fileinput-new" data-providers="fileinput">
 <tr>
-<td>Image</td>
+<td><h4 class="input-title">Image</h4></td>
 <td><input class="form-control" type="file" name="file" accept="image/*"></td>
 </tr>
  
-</div>
+</div><br>
  
 <button class="btn btn-lg btn-primary" type="submit">Save</button>
 <button class="btn btn-lg btn-primary" type="reset">Cancel</button>

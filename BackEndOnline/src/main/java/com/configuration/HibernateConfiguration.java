@@ -25,8 +25,8 @@ import com.Model.Cart;
 import com.Model.Category;
 import com.Model.Orders;
 import com.Model.Product;
-import com.Model.User;
 import com.Model.Supplier;
+import com.Model.User;
 
 
 
@@ -72,6 +72,7 @@ sessionBuilder.addAnnotatedClass(Product.class);
 sessionBuilder.addAnnotatedClass(Supplier.class);
 sessionBuilder.addAnnotatedClass(Cart.class);
 sessionBuilder.addAnnotatedClass(Orders.class);
+
 
 //sessionBuilder.scanPackages("com.model");
 return sessionBuilder.buildSessionFactory();
@@ -121,6 +122,7 @@ public OrdersDaoImpl getOrdersDAO(SessionFactory sessionFactory)
 {
 return new OrdersDaoImpl(sessionFactory);
 }
+
 
 
 @Autowired

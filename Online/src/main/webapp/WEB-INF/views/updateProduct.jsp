@@ -25,33 +25,42 @@
 <c:url value="/productUpdate" var="pro"></c:url>
 <form action="${pageContext.request.contextPath}/admin/productUpdate" method="post" enctype="multipart/form-data">
 <input type="hidden" name="pid" value="${produ.pid }">
-<label>Product Name</label>
-<input type="text" name="pName" value="${produ.name }" required/>
-<label>Product Description</label>
-<input type="text" name="pDescription" value="${produ.description }" required/>
-<label>Product Price</label>
-<input type="text" name="pPrice" value="${produ.price }" required/>
-<label>Product Stock</label>
-<input type="text" name="pStock" value="${produ.stock }" required/>
-<label>Product Category</label>
-<select name="pCategory">
-<option value="0">----Select Category----</option> 
+
+<h4 class="input-title">Product Name</h4>
+<input class="form-control" type="text" name="pName" value="${produ.name }" required />
+<h4 class="input-title">Product Description</h4>
+<input class="form-control" type="text" name="pDescription" value="${produ.description }" required />
+<h4 class="input-title">Product Price</h4>
+<input class="form-control" type="text" name="pPrice" value="${produ.price }" required />
+<h4 class="input-title">Product Stock</h4>
+<input class="form-control" type="text" name="pStock" value="${produ.stock }" required />
+
+
+<div class="form-group">
+<td><h4 class="input-title">Select Category</h4></td>
+<td><select class="form-control" name="pCategory" required>
+<option>----Category----</option> 
 <c:forEach items="${catList}" var="cat"> 
 <option value="${cat.cid}">${cat.name}</option>
 </c:forEach>
 </select>
-<br>
-<label>Product Supplier</label>
-<select name="pSupplier">
-<option value="0">----Select Supplier----</option> 
-<c:forEach items="${supList}" var="sup"> 
+</div>
+
+
+ <div class="form-group">
+<td><h4 class="input-title">Select Supplier</h4></td>
+<td><select class="form-control" name="pSupplier" required>
+<option>----Supplier----</option> 
+<c:forEach items="${supList}" var="sup">
 <option value="${sup.sid}">${sup.name}</option>
 </c:forEach>
 </select>
-<br>
-<tr><td>Image</td><br>
-<td><input type="file" name="file"/></td></tr>
-<button class="btn btn-lg btn-primary" type="update">Update</button>
+</div>
+
+
+<tr><td><h4 class="input-title">Image</h4></td><br>
+<td><input class="form-control" type="file" name="file"/></td></tr><br>
+<button class="btn btn-lg btn-primary" type="update">Update</button></div>
 </form>
 </div>
  

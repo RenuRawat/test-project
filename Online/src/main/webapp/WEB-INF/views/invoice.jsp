@@ -14,27 +14,32 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 
+<br>
+<br><br>
+
 <div class="container">
 <form class="form-horizontal" action="checkout">
 <fieldset>
 <div class="form-group">
 <label class="col-md-4 control-label" for="username">Customer Name</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="username">${userDetails.name }</label>
+<label class="col-md-4 control-label" for="username">${orderDetails.username }</label>
 </div>
 </div>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="email">Customer Email Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="email">${userDetails.id }</label>
+<label class="col-md-4 control-label" for="email">${orderDetails.email }</label>
 </div></div>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="address">Shipping Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${userDetails.address }</label>
+<label class="col-md-4 control-label" for="address">${orderDetails.address }</label>
 </div></div>
+
+
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>

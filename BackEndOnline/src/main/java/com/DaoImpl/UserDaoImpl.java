@@ -1,6 +1,6 @@
 package com.DaoImpl;
 
-import com.Model.Product;
+
 import com.Model.User;
 
 import org.hibernate.HibernateException;

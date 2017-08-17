@@ -2,10 +2,11 @@
 <html>
 <head>
 <title>Registration Page</title>
+<link href="/mycss/Registration.css">
 
 <style>
-.err{
-color: red;
+.err {
+color: red; font-weight: bold;
 }
 .err_bdr {
 border: 1px solid red;
@@ -85,6 +86,7 @@ border: 1px solid red;
         <form:checkbox path="mailingList" label="Would you like to join our mailinglist?" />
         </td>
     </tr> --%>
+    
     <tr>
         <td colspan="2"><input type="submit" value="Register"></td>
     </tr>

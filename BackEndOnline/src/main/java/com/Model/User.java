@@ -39,7 +39,7 @@ public class User implements Serializable {
 	 private String address;
 	 
 	
-	 @Pattern(regexp="^(0|[1-9][0-9]*)$" , message="please enter digits")
+	 @Pattern(regexp=("\\d{3}-\\d{7}") , message="please enter digits")
 	 @NotNull
 	 @Size(min=8, max=10, message="Enter correct number")
 	 private String phone;

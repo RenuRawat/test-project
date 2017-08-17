@@ -2,6 +2,8 @@ package com.controller;
 
 
 import java.security.Principal;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,7 +45,7 @@ public class CartController {
 	 OrdersDaoImpl ordersDaoImpl;
 	
 	
-	@RequestMapping(value="/addToCart", method = RequestMethod.POST) 
+	@RequestMapping(value="/cart/addToCart", method = RequestMethod.POST) 
 	
 	public ModelAndView addToCart(HttpServletRequest req)
 	 {
@@ -98,6 +100,7 @@ public class CartController {
 	    	  mav.setViewName("cart");
 	    	  return mav;
 	   }
+	   
 	 }
 	
 	
@@ -108,26 +111,26 @@ public class CartController {
 		ModelAndView mav= new ModelAndView("invoice");
 		Orders ord=new Orders();
 		Principal principal = req.getUserPrincipal();
-		System.out.println("getinvoice0");
+		
 		String userEmail = principal.getName();
-		System.out.println("getinvoice");
-		Double total= Double.parseDouble(req.getParameter("total"));
-		String payment= req.getParameter("payment");
-		System.out.println("getinvoice");
+		System.out.println("getinvoice1");
+		String payment= (req.getParameter("payment"));
+		System.out.println("getinvoice3");
+     	Double total=(Double.parseDouble(req.getParameter("total")));
+	        System.out.println("getinvoice2");
 		User user= userDaoImpl.findById(userEmail);
-		System.out.println("getinvoice2");
+		System.out.println("getinvoice4");
 		ord.setUser(user);
 		ord.setTotal(total);
 		ord.setPayment(payment);
-		System.out.println("getinvoice3");
+		System.out.println("getinvoice5");
         ordersDaoImpl.insertOrders(ord);
-        System.out.println("getinvoice4");
+        System.out.println("getinvoice6");
         mav.addObject("orderDetails", user);
         return mav;
 	 }
         
-/*@RequestMapping(value="/checkout", method = RequestMethod.POST) 
-
+@RequestMapping(value="/checkout", method = RequestMethod.GET) 
     public ModelAndView checkoutProcess(HttpServletRequest req)
     {   
 	ModelAndView mav= new ModelAndView("checkout");
@@ -143,7 +146,7 @@ public class CartController {
 	mav.addObject("user", user);
 	mav.addObject("cart", cart);
 	return mav;
-    }*/
+    }
 
     
    @RequestMapping("/deleteCart/{cartId}")
@@ -159,7 +162,7 @@ public class CartController {
     }     
 
    
-   @RequestMapping(value="/goToCart", method=RequestMethod.GET)
+   @RequestMapping(value="/cart/goToCart", method=RequestMethod.GET)
    public ModelAndView goToCart(HttpServletRequest req) 
     {
 	   ModelAndView mv= new ModelAndView();

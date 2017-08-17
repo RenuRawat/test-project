@@ -1,1 +1,9 @@
-@charset "ISO-8859-1";
+.err{
+color: red;
+}
+.err_bdr {
+border: 1px solid red;
+}
+.bdr {
+  border: 1px solid gray;
+}
