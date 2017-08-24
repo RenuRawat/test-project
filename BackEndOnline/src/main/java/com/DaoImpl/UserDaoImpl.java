@@ -26,7 +26,7 @@ public class UserDaoImpl implements UserDao{
 		  session.beginTransaction();
 		  
 		  // value get nd set from the User(Getter ns Setter method////
-		  session.save(user);
+		  session.persist(user);
 		  session.getTransaction().commit();
 	}
 

@@ -78,11 +78,11 @@ import com.Model.Supplier;
 	
 	@RequestMapping(value="/savesupplier", method = RequestMethod.POST) 
 	@Transactional
-	public ModelAndView savesup(@RequestParam("sid") int sid, @RequestParam("name") String name) {
+	public ModelAndView savesup(@RequestParam("sid") int sid, @RequestParam("suppliername") String name) {
 		ModelAndView mav= new ModelAndView();
 		Supplier s = new Supplier();
 		s.setSid(sid);
-		s.setName(name);
+		s.setSuppliername(name);
 		supDaoImpl.insertSupplier(s);
 		mav.setViewName("index");
 		return mav;

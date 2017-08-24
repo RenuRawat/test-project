@@ -24,6 +24,7 @@
 
 <c:url value="/productUpdate" var="pro"></c:url>
 <form action="${pageContext.request.contextPath}/admin/productUpdate" method="post" enctype="multipart/form-data">
+
 <input type="hidden" name="pid" value="${produ.pid }">
 
 <h4 class="input-title">Product Name</h4>
@@ -52,7 +53,7 @@
 <td><select class="form-control" name="pSupplier" required>
 <option>----Supplier----</option> 
 <c:forEach items="${supList}" var="sup">
-<option value="${sup.sid}">${sup.name}</option>
+<option value="${sup.sid}">${sup.suppliername}</option>
 </c:forEach>
 </select>
 </div>

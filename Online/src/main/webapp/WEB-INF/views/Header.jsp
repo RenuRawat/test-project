@@ -27,7 +27,12 @@
                     <span class="icon-bar"></span>
                 </button>
     
-      <a class="navbar-brand" href="index">Online Shop</a>
+    <a class="navbar-brand" href="index">GADGETs</a>
+ <!--  <a href="index" class="navbar-brand"> -->
+ <img src="<c:url value="/images/logo.png"/>" width="50" height="50"   />
+  <!--  <img src="images/logo.png" width="50" height="50"/> -->
+<!-- </a> -->
+      
     </div>
     <!-- Collect the nav links, forms, and other contents for toggling -->
     
@@ -46,10 +51,7 @@
 
     <li><a>Welcome:${pageContext.request.userPrincipal.name}</a></li>
     <li><a href="<c:url value="/logout"/>">Logout</a></li>
-    <security:authorize access="hasRole('ROLE_USER')">
-    
-    <li><a href="${pageContext.request.contextPath}/cart/goToCart">My Cart <i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
-    </security:authorize>
+
 
     </c:if>
     </ul></div>
@@ -61,7 +63,7 @@
   <li class="active"><a href="index">Home</a></li>
     <li><a class="page-scroll" href="<c:url value="aboutus"/>">About us</a></li>
  <li><a class="page-scroll" href="<c:url value="contactus"/>">Contact us</a></li> 
- <li><a class="page-scroll" href="<c:url value="checkout"/>">Checkout</a></li>
+ <li><a class="page-scroll" href="<c:url value="Demo"/>">Demo</a></li>
  
  
    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="productCustList">Category<span class="caret"></span></a>
@@ -73,7 +75,17 @@
 
 
 
-<security:authorize access="hasRole('ROLE_ADMIN')">
+<sec:authorize access="hasRole('ROLE_USER')">
+<ul class="nav navbar-nav navbar-right"> 
+
+<c:if test="${pageContext.request.userPrincipal.name!=null }">
+
+    <li><a href="${pageContext.request.contextPath}/cart/goToCart">My Cart <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a></li>
+</c:if></ul>
+</sec:authorize>
+ 
+ 
+ <sec:authorize access="hasRole('ROLE_ADMIN')">
 <ul class="nav navbar-nav navbar-right"> 
 
 <c:if test="${pageContext.request.userPrincipal.name!=null }">
@@ -81,7 +93,8 @@
 <li><a class="page-scroll" href="<c:url value="/admin/adding"/>">Add Product</a></li>
 <li><a class="page-scroll" href="<c:url value="/admin/productList"/>">Update Product</a></li>
 </c:if></ul>
-</security:authorize>
+</sec:authorize>
+ 
  
  
 </ul>   

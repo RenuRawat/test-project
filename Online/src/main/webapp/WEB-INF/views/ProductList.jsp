@@ -8,6 +8,7 @@
   <title>Product List</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="assets/mycss/ProductList.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -31,7 +32,7 @@
 <td><c:out value="${c.pid }"></c:out></td>
 <td><c:out value="${c.name }"></c:out></td>
 <td><c:out value="${c.cat.name }"></c:out></td>
-<td><c:out value="${c.sup.name }"></c:out></td>
+<td><c:out value="${c.sup.suppliername }"></c:out></td>
 <td><c:out value="${c.price }"></c:out></td>
 <td><c:out value="${c.stock }"></c:out></td>
 

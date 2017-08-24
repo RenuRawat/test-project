@@ -18,7 +18,7 @@ http://www.springframework.org/schema/context
 
 
 
-<mvc:resources mapping="/resources/**"  location ="/resources/"/>
+<mvc:resources mapping="/images/**"  location ="/images/"/>
 
 
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

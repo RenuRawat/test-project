@@ -27,7 +27,7 @@ public class CartDaoImpl {
 			  session.beginTransaction();
 			  
 			  // value get nd set from the User(Getter ns Setter method////
-			  session.save(cart);
+			  session.persist(cart);
 			  
 			  session.getTransaction().commit();	
 		  }
@@ -79,6 +79,9 @@ public class CartDaoImpl {
 				
 			}
 
+			
+			
+
 			public void updateCart(Cart cr) {
 				Session session= sessionFactory.openSession();
 			    session.beginTransaction();
@@ -86,5 +89,7 @@ public class CartDaoImpl {
 			   // System.out.println("********************reach till query************************");
 			    session.getTransaction().commit();
 			}
+	
+		
 		
 }

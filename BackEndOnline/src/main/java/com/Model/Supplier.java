@@ -20,8 +20,18 @@ public class Supplier implements Serializable {
 	@Id
  @GeneratedValue(strategy = GenerationType.AUTO)
 	private int sid;
-	private String name;
+	private String suppliername;
 	
+
+
+	public String getSuppliername() {
+		return suppliername;
+	}
+
+	public void setSuppliername(String suppliername) {
+		this.suppliername = suppliername;
+	}
+
 	@OneToMany (targetEntity=Product.class, fetch=FetchType.EAGER, mappedBy="sup")
 	
 	private Set<Product> products = new HashSet<Product>(0);
@@ -34,13 +44,6 @@ public class Supplier implements Serializable {
 		this.sid = sid;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public Set<Product> getProducts() {
 		return products;
@@ -49,7 +52,8 @@ public class Supplier implements Serializable {
 	public void setProducts(Set<Product> products) {
 		this.products = products;
 	}
-	
+
+
 	
 
 	

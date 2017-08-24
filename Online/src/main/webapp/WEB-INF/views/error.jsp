@@ -5,8 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript">
+$(".alert").alert()
+</script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+    <script src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<p><h2>Error Page!!!<a href="${pageContext.request.contextPath}/index">Go to Home</a></h2>
+<jsp:include page="Header.jsp"></jsp:include>
+<br><br><br><br><br><br>
+
+<center><div class="alert alert-success" role="alert">
+  <h2 class="alert-heading"> Unauthorize User Email</h2></div>
+
+<h2><a href="${pageContext.request.contextPath}/index">Go to Home</a></h2></center>
 </body>
 </html>

@@ -27,6 +27,24 @@
          /*  window.parent.postMessage( iframe_height, 'https://b.com'); */
         });
     </script>
+    <script type="text/javascript">
+    
+    function updateMap(gps)
+    {
+        var latitude = "${recentLocation.latitude}";
+        var longitude = "${recentLocation.logitude}";
+        var gpsPoint = new google.maps.LatLng(latitude, longitude);
+        if(marker != null)
+            marker.setMap(null);
+        if(map!=null)
+            map.setCenter(gpsPoint);
+        marker = new google.maps.Marker({
+        position:gpsPoint,
+        map:map
+        });
+        markers.push(marker);
+    }
+    </script>
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
@@ -64,25 +82,18 @@
         </div>
         <div class="col-sm-6">
         
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96690.80542089987!2d29.864461132544537!3d40.77109282810726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4f66644bfb9d%3A0x82690ee7586b7eb9!2zxLB6bWl0LCBLb2NhZWxp!5e0!3m2!1str!2str!4v1480782606579" width="565" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.2531389455903!2d-89.23024619999998!3d48.4516724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d5923dbfe697737%3A0xc9d925c9bc9573fa!2s116+Bruce+St%2C+Thunder+Bay%2C+ON+P7A+5W6!5e0!3m2!1sen!2sca!4v1424272264157" width="600" height="450" frameborder="0" style="border:0"></iframe>
         </div>
+<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbootsnipp.com%2Fiframe%2Fb2BWe" class="pull-right" target="_blank"></a>
+        
     </div>
 </div>
        
 
-	<script type="text/javascript">
-	
-	</script>
-</body>
-</html>
 
 
 
 
-
-
-this is contact us page
-<br>
+<hr>
 <jsp:include page="Footer.jsp"></jsp:include>
-</body>
-</html>
+</body></html>

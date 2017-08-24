@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="/resources/bootstrap.css">
+<link href="assets/mycss/Registration.css" rel="stylesheet">
 <title>Admin Page</title>
 </head>
 <body>
@@ -48,7 +48,7 @@ class="form-signin">
 <h4 class="input-title">Supplier ID</h4>
 <input class="form-control" type="number" name="sid" required />
 <h4 class="input-title">Supplier Name</h4>
-<input class="form-control" type="text" name="name" required /><br>
+<input class="form-control" type="text" name="suppliername" required /><br>
 <button class="btn btn-lg btn-primary" type="submit">Save</button>
 <button class="btn btn-lg btn-primary" type="reset">Cancel</button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 </form></div> 
@@ -83,7 +83,7 @@ class="form-signin">
 <td><select class="form-control" name="pSupplier" required>
 <option>----Supplier----</option> 
 <c:forEach items="${supList}" var="sup">
-<option value="${sup.sid}">${sup.name}</option>
+<option value="${sup.sid}">${sup.suppliername}</option>
 </c:forEach>
 </select>
 </div>

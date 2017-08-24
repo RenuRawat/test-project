@@ -18,25 +18,26 @@
 <br><br>
 
 <div class="container">
-<form class="form-horizontal" action="checkout">
+
+<form class="form-horizontal" action="Thankyou">
 <fieldset>
 <div class="form-group">
 <label class="col-md-4 control-label" for="username">Customer Name</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="username">${orderDetails.username }</label>
+<label class="col-md-4 control-label" for="username">${orderDetails.username    }</label>
 </div>
 </div>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="email">Customer Email Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="email">${orderDetails.email }</label>
+<label class="col-md-4 control-label" for="email">${orderDetails.email     }</label>
 </div></div>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="address">Shipping Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.address }</label>
+<label class="col-md-4 control-label" for="address">${orderDetails.address        }</label>
 </div></div>
 
 
@@ -44,13 +45,14 @@
 <div class="form-group">
 <label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="deliverydate">Delivery in 7 Working day</label>
+<label class="col-md-4 control-label" for="deliverydate">Delivery in 7 Working day                </label>
 </div></div>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="submit"></label>
 <div class="col-md-4">
-<button type="submit" name="invoiceClick" class="btn btn-primary"> Ok </button>
+
+<a class="btn btn-success" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoiceClick" class="btn btn-primary"> Ok </a>
 </div></div>
 
 </fieldset>

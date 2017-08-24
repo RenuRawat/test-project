@@ -72,16 +72,19 @@ public String admin() {
 public String aboutus() {
 	return "AboutUs";
 	}
-
+@RequestMapping("/Demo")
+public String Demo() {
+	return "Demo";
+	}
 
 
 @RequestMapping("/contactus")
 public String contactus() {
 	return "ContactUs";
 	}
-@RequestMapping("/forget")
-public String forget() {
-	return "ForgetPassword";
+@RequestMapping("/Thankyou")
+public String Thankyou() {
+	return "Thankyou";
 	}
 
 
@@ -111,7 +114,7 @@ public ModelAndView goTologin(@ModelAttribute("user") User user, BindingResult r
 public ModelAndView register() {
 	ModelAndView mav= new ModelAndView();
 	mav.addObject("user", new User());
-	mav.setViewName("Registeration");
+	mav.setViewName("Registration");
 	return mav;
 	}
 
@@ -149,7 +152,7 @@ m.addAttribute("proList",proDaoImpl.retrieve());
 m.addAttribute("satList",supDaoImpl.retrieve());}
 
 
-@RequestMapping(value="/prodDetail/{cid}") 
+@RequestMapping(value="prodDetail/{cid}") 
 public ModelAndView prodDet(@PathVariable("cid") int cid) 
   {
 	ModelAndView mv= new ModelAndView();

@@ -26,7 +26,6 @@ public class User implements Serializable {
 	private String email;
 	
 	@NotEmpty(message="Enter the Username")
-	
 	 private String username;
 	
 	@NotNull(message="Password is Null")
@@ -39,7 +38,7 @@ public class User implements Serializable {
 	 private String address;
 	 
 	
-	 @Pattern(regexp=("\\d{3}-\\d{7}") , message="please enter digits")
+	 @Pattern(regexp="[\\d]{10}" , message="please enter digits")
 	 @NotNull
 	 @Size(min=8, max=10, message="Enter correct number")
 	 private String phone;

@@ -29,6 +29,14 @@
 <c:set var="gtot" value="${gtot + c.cartPrice * c.cartQuantity }"></c:set>
 </c:forEach>
 
+<%-- <c:forEach var="c" items="${cart}">
+<c:set var="c" value="${c.prod.stock-c.cartQuantity }"></c:set>
+</c:forEach> --%>
+<%-- <c:set var="stot" value="0"></c:set>
+<c:forEach var="c" items="${cart}">
+<c:set var="stot" value="${c.product.stock-c.cartQuantity }"></c:set>
+</c:forEach> --%>
+
 <div class="well">
 <table class="tbdetail">
 
@@ -45,8 +53,8 @@
 <td>${user.phone}</td>
 </tr>
 <tr>
-<td colspan="3"><b>Customer Amount</b></td>
-<td>${gtot}</td>
+<td colspan="3"><b>Total Amount</b></td>
+<td> ${gtot}</td>
 </tr>
 
 
@@ -56,41 +64,44 @@
 <h3><strong>Enter Card Details</strong></h3>
 </div>
 <input type="hidden" name="total" value="${gtot}">
+
 <div class="well">
-<label>Payment</label><br>
-<select name="payment">
+<table>
+<tr><th><label>Payment</label></th><br>
+<td><select name="payment" style="width:60%">
+<option>----Select----</option> 
+
 <option value="NetBanking">Net Banking</option>
 <option value="COD">Cash on Delivery</option>
-</select>
-<div>
-<br>
-</div>
-<input type="text" name="cardnum" placeholder="Enter your card number" style="width:70%"><br><br>
-<input type="text" name="name" placeholder="Name on the card" style=",argin-bottom:10px; width:30%"><br>
-<div>
-<table>
-<tr><th colspan="2">Expire</th>
+</select></td></tr>
+
+<tr><th>Card Number</th>
+<td><input type="text" name="cardnum" placeholder="Enter your card number" style="width:60%"></td></tr><br>
+<tr><th>Card Namer</th>
+<td><input type="text" name="name" placeholder="Name on the card" style="argin-bottom:10px; width:60%"></td></tr><br>
+
 <tr>
-<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
 <th>CVV</th>
- <td><input path="number" name="cvv"></td></tr>
+ <td><input path="number" name="cvv" style="width:60%"></td></tr>
  <tr>
+ <th>Expire</th>
 <td colspan="2"> 
-<input type="text" min="1" max="31" name="month" placeholder="mm" style="width:50%">
-<input type="text" min="2016" max="2030" name="year" placeholder="yy" style="width:50%"></td>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<input type="text" min="1" max="31" name="month" placeholder="mm" style="width:20%">&nbsp;&nbsp;
+<input type="text" min="2016" max="2030" name="year" placeholder="yy" style="width:20%"></td>
+
 </tr>
-</table>
-</div>
-</div></div>     <!-- inner end card number -->
+</table></div>
+
+    <!-- inner end card number -->
 <input type="submit" value="PROCEED" style="width:75%; font-size:20px;" class="btn btn-success">
-</form>
+</form></div></div> 
 </div>
 </div>
 </div>
 
 
-</div>
+
 <hr>
 
 </body>
