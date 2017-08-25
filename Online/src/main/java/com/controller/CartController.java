@@ -163,40 +163,33 @@ public ModelAndView checkoutProcess(HttpServletRequest request)
 
 
 
-@RequestMapping(value="/invoiceprocess", method = RequestMethod.POST)
+@RequestMapping(value="/invoiceprocess", method = RequestMethod.GET) 
 
-public ModelAndView orderSave(HttpServletRequest request)
-{
-             ModelAndView mav= new ModelAndView("invoice");
-             System.out.println("invoice1");
-             Orders ord=new Orders();
-             System.out.println("invoice2");
-             Principal principal = request.getUserPrincipal();
-             System.out.println("invoice3");
-             String userEmail = principal.getName();
-             System.out.println("invoice4");
-             Double total= Double.parseDouble(request.getParameter("total"));
-             System.out.println("invoice5");
-             String payment= request.getParameter("payment");
-             System.out.println("invoice6");
-             User user= userDaoImpl.findById(userEmail);
-             System.out.println("invoice7");
+public ModelAndView orderSave(HttpServletRequest req)
+ {
+	ModelAndView mav= new ModelAndView("invoice");
+	Orders ord=new Orders();
+	Principal principal = req.getUserPrincipal();
+	
+	String userEmail = principal.getName();
+	
+	String payment= (req.getParameter("payment"));
+	
+ 	//Double total=(Double.parseDouble(req.getParameter("total")));
+     
+	User user= userDaoImpl.findById(userEmail);
+	
+	ord.setUser(user);
+	//ord.setTotal(total);
+	ord.setPayment(payment);
+	
+    ordersDaoImpl.insertOrders(ord);
+   
+    mav.addObject("orderDetails", user);
+    mav.setViewName("invoice");
 
-                     	       		
-    		ord.setUser(user);
-    		System.out.println("invoice8");
-    		ord.setTotal(total);
-    		System.out.println("invoice9");
-    		ord.setPayment(payment);
-    		System.out.println("invoice10");
-    		
-            ordersDaoImpl.insertOrders(ord);
-            System.out.println("invoice11");
-           
-            mav.addObject("orderDetails", user);
-            System.out.println("invoice12");
-           return mav;
-}          
+    return mav;
+ }          
 
 
 
@@ -204,16 +197,23 @@ public ModelAndView orderSave(HttpServletRequest request)
 @RequestMapping("/deleteCart/{cartId}")
 public ModelAndView deleteCartItem(@PathVariable("cartId") int cartId, HttpServletRequest req)
 {
+
        ModelAndView mv= new ModelAndView("checkout");
        Principal principal = req.getUserPrincipal();
        String userEmail =principal.getName();
+       System.out.println("getCartId3");
+       
 cartDaoImpl.deleteCart(cartId);
+
+System.out.println("getCartId4");
 mv.addObject("cartInfo", cartDaoImpl.findCartById(userEmail));
+System.out.println("getCartId5");
 mv.setViewName("cart");
+System.out.println("getCartId6");
 return mv;
 
+} 
 
-}    
 
 @RequestMapping("/goToCart")
 public ModelAndView showCartItem( HttpServletRequest req)

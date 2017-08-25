@@ -108,7 +108,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="submit" value="PROCEED" class="btn btn-primary btn-submit-fix">
+                               
+                                    <a href="${pageContext.request.contextPath }/cart/invoiceprocess" role="button" type="submit" class="btn btn-primary btn-submit-fix">PROCEED</a>
                                 </div>
                             </div>
                         </div>

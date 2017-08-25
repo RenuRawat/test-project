@@ -53,7 +53,7 @@
 
 <td class="actions" data-th="">
 <a href="<c:url value="/cart/goToCart" />" class="btn btn-info btn-md" ><i class="fa fa-refresh"></i></a>
-<a href="<c:url value="/deleteCart/${c.cartId}"/>" class="btn btn-danger btn-md"><i class="fa fa-trash-o"></i></a></td>
+<a href="<c:url value="/cart/deleteCart/${c.cartId}"/>" class="btn btn-danger btn-md"><i class="fa fa-trash-o"></i></a></td>
 <c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity}"></c:set>
 
 

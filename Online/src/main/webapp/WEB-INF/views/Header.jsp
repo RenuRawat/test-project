@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
     
-    <a class="navbar-brand" href="index">GADGETs</a>
+    <a class="navbar-brand" href="<c:url value="/index"/>">GADGETs</a>
  <!--  <a href="index" class="navbar-brand"> -->
  <img src="<c:url value="/images/logo.png"/>" width="50" height="50"   />
   <!--  <img src="images/logo.png" width="50" height="50"/> -->
@@ -60,10 +60,10 @@
     
     
   <ul class="nav navbar-nav">
-  <li class="active"><a href="<c:url value="index"/>">Home</a></li>
-    <li><a class="page-scroll" href="<c:url value="aboutus"/>">About us</a></li>
- <li><a class="page-scroll" href="<c:url value="contactus"/>">Contact us</a></li> 
- <li><a class="page-scroll" href="<c:url value="Demo"/>">Demo</a></li>
+  <li class="active"><a href="<c:url value="/index"/>">Home</a></li>
+    <li><a class="page-scroll" href="<c:url value="/aboutus"/>">About us</a></li>
+ <li><a class="page-scroll" href="<c:url value="/contactus"/>">Contact us</a></li> 
+<%--  <li><a class="page-scroll" href="<c:url value="Demo"/>">Demo</a></li> --%>
  
  
    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value="productCustList"/>">Category<span class="caret"></span></a>

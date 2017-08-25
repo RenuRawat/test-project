@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.DaoImpl.CatDaoImpl;
 import com.DaoImpl.ProDaoImpl;
 import com.DaoImpl.SupDaoImpl;
+import com.Model.Cart;
 import com.Model.Category;
 import com.Model.Product;
 import com.Model.Supplier;
@@ -231,6 +232,13 @@ import com.Model.Supplier;
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("ProductList", proDaoImpl.retrieve());
 		mav.setViewName("ProductList");
+		
+	/*	 Product isExist= proDaoImpl.getProById(pid);
+		if(isExist==null)
+		{
+			return mav;
+		}*/
+		
 		return mav;
 	}
 	

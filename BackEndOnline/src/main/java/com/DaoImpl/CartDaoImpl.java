@@ -73,8 +73,14 @@ public class CartDaoImpl {
 				Session session= sessionFactory.openSession();
 			    session.beginTransaction();
 			    Cart cr =(Cart) session.get(Cart.class, cartId);
+			    
+			    System.out.println("getCartIdDel");
+			   
 			    session.delete(cr);
+			    
+			    System.out.println("getCartIdDel1");
 			  System.out.println("delete");
+			  System.out.println("getCartIdDel3");
 			    session.getTransaction().commit();
 				
 			}

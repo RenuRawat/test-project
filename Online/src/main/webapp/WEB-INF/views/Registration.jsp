@@ -3,7 +3,7 @@
 <html lang="en">
     <head> 
     <title>Registration</title>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     function check_info(){
     	
     	console.log('inside function');
@@ -17,9 +17,9 @@
     		alert ('Password is not match');
     		return false;
     		
-    	}    }   
+    	}    }    
     
-</script>
+</script>  -->
     <style>
         .err{
 color: red;
@@ -93,17 +93,17 @@ border: 1px solid red;
 <errors path="password" cssClass="err"/>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-<input type="password" id="inputPassword" id="password" path="password" name="password" class="form-control" placeholder= "********" required />
+<input type="password" id="inputPassword" path="password" name="password" class="form-control" placeholder= "********" required />
 </div></div></div>
 
-<div class="form-group has error has-feedback has success">
+<!-- <div class="form-group has error has-feedback has success">
 <label for ="confirm" class="cols-sm-2 control-label">Confirm Password</label>
 <div class="cols-sm-10">
 
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 <input type="password" id="inputConfirmPassword" id="confirm"  name="confirm" class="form-control" placeholder= "********" required />
-</div></div></div>
+</div></div></div> -->
 
 <div class="form-group has error has-feedback has success">
 <label for ="address" class="cols-sm-2 control-label">Address</label>
@@ -128,4 +128,4 @@ border: 1px solid red;
 </fieldset></form>
 </div></div></div>
 
-
+</body></html>

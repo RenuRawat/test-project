@@ -99,7 +99,7 @@
                 </div>
                 <div class="space-ten"></div>
                 <div class="btn-ground text-center">
-                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail/708/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail708/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
                 </div>
                 <div class="space-ten"></div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="space-ten"></div>
                 <div class="btn-ground text-center">
-                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail/714/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail714/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_lappy"><i class="fa fa-search"></i> Quick View</button>
                 </div>
                 <div class="space-ten"></div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="space-ten"></div>
                 <div class="btn-ground text-center">
-                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail/713/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                    <a class="btn btn-primary" role="button" href="<c:url value="/prodDetail713/${c.pid}"/>"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_Headphone"><i class="fa fa-search"></i> Quick View</button>
                 </div>
                 <div class="space-ten"></div>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">
-                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail/708/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail708/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
                          
                         </div>
                     </div>
@@ -281,7 +281,7 @@
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">
-                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail/713/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail713/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -345,7 +345,7 @@
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">
-                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail/713/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+                            <a class="btn btn-primary"  role="button" href="<c:url value="/prodDetail713/${c.pid}"/>"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 <!--                             <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
  -->                        </div>
                     </div>

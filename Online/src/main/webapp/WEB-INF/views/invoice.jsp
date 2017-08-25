@@ -28,9 +28,14 @@
                   
  
  <div class="panel panel-info">
-<div class="panel-heading">Invoice Process</div>
+<div class="panel-heading"><h4>Invoice Process</h4></div>
 <div class="panel-body">
 <fieldset>
+<%-- <c:set var="gtot" value="0"></c:set>
+<c:forEach var="c" items="${cart}">
+<c:set var="gtot" value="${gtot + c.cartPrice * c.cartQuantity }"></c:set>
+</c:forEach> --%>
+
 <div class="form-group">
 <label class="col-md-4 control-label" for="username">Customer Name</label>
 <div class="col-md-4">
@@ -50,7 +55,11 @@
 <label class="col-md-4 control-label" for="address">${orderDetails.address}</label>
 </div></div><br>
 
-
+<%-- <div class="form-group">
+<label class="col-md-4 control-label" for="address">Total Amount</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${user.gtot}</label>
+</div></div><br> --%>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>
@@ -59,10 +68,10 @@
 </div></div><br><br>
 
 
-<div class="form-group">
-<div class="col-md-6 col-sm-6 col-xs-12">
+<center><div class="form-group">
+<div class="col-md-4 control-label">
 <a class="btn btn-success btn-block" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoice" class="btn btn-primary"> Ok </a>
-</div></div><br>
+</div></div></center><br>
 
 </fieldset>
 </div></div>

@@ -13,10 +13,23 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+    
+
+  
+  
+  
+  
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/Header.jsp"></jsp:include>
 <h2>Product List</h2>
+
+<c:if test="${c.stock gt 0 }">
+
+</c:if>
+
 <table class="table table-hover" id="category" class="display" border="1" width="80" align="center">
 
 <tr>
