@@ -5,61 +5,75 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/mycss/checkout.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="/resources/bootstrap.css">
-<title>Login Page</title>
 </head>
-<body>
+<body><br><br>
 <jsp:include page="Header.jsp"></jsp:include>
-
-<br>
-<br><br>
+<br><br><br><br>
 
 <div class="container">
+           
+                
+          <center> <div class="row cart-body">
 
-<form class="form-horizontal" action="Thankyou">
+              <form action="form-horizontal" method="post">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+               
+                  
+ 
+ <div class="panel panel-info">
+<div class="panel-heading">Invoice Process</div>
+<div class="panel-body">
 <fieldset>
 <div class="form-group">
 <label class="col-md-4 control-label" for="username">Customer Name</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="username">${orderDetails.username    }</label>
+<label class="col-md-4 control-label" for="username">${orderDetails.username}</label>
 </div>
-</div>
+</div><br>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="email">Customer Email Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="email">${orderDetails.email     }</label>
-</div></div>
+<label class="col-md-4 control-label" for="email">${orderDetails.email}</label>
+</div></div><br><br>
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="address">Shipping Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.address        }</label>
-</div></div>
+<label class="col-md-4 control-label" for="address">${orderDetails.address}</label>
+</div></div><br>
 
 
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="deliverydate">Delivery in 7 Working day                </label>
-</div></div>
+<div class="col-md-6">
+<label class="col-md-6 control-label" for="deliverydate">Delivery in 7 Working day</label>
+</div></div><br><br>
+
 
 <div class="form-group">
-<label class="col-md-4 control-label" for="submit"></label>
-<div class="col-md-4">
-
-<a class="btn btn-success" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoiceClick" class="btn btn-primary"> Ok </a>
-</div></div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<a class="btn btn-success btn-block" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoice" class="btn btn-primary"> Ok </a>
+</div></div><br>
 
 </fieldset>
-
-</form>
-
-</div>
-
-</body>
-</html>
+</div></div>
+</div></form>
+</div></center>
+               
+          <div class="row cart-footer">
+        
+            </div></div>
+            
+            
+           </body></html>
+           
+           

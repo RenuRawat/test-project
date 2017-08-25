@@ -38,7 +38,9 @@ public class User implements Serializable {
 	 private String address;
 	 
 	
-	 @Pattern(regexp="[\\d]{10}" , message="please enter digits")
+	 /*@Pattern(regexp="[\\d]{10}" , message="please enter digits")*/
+	 
+	 @Pattern(regexp="^[789]\\d{9}$",message="number should be of 10 digits,and begins 9,8,7 since in india")
 	 @NotNull
 	 @Size(min=8, max=10, message="Enter correct number")
 	 private String phone;

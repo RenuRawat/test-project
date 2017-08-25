@@ -152,7 +152,7 @@ m.addAttribute("proList",proDaoImpl.retrieve());
 m.addAttribute("satList",supDaoImpl.retrieve());}
 
 
-@RequestMapping(value="prodDetail/{cid}") 
+@RequestMapping(value="prodDetail{cid}") 
 public ModelAndView prodDet(@PathVariable("cid") int cid) 
   {
 	ModelAndView mv= new ModelAndView();

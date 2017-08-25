@@ -60,16 +60,16 @@
     
     
   <ul class="nav navbar-nav">
-  <li class="active"><a href="index">Home</a></li>
+  <li class="active"><a href="<c:url value="index"/>">Home</a></li>
     <li><a class="page-scroll" href="<c:url value="aboutus"/>">About us</a></li>
  <li><a class="page-scroll" href="<c:url value="contactus"/>">Contact us</a></li> 
  <li><a class="page-scroll" href="<c:url value="Demo"/>">Demo</a></li>
  
  
-   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="productCustList">Category<span class="caret"></span></a>
+   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value="productCustList"/>">Category<span class="caret"></span></a>
 <ul class="dropdown-menu">
 <c:forEach var="catVal" items="${catList}">
-<li><a href="${pageContext.request.contextPath}/productCustList?cid=${catVal.cid}"> ${catVal.name } </a></li>
+<li><a class="page-scroll" href="<c:url value="/productCustList?cid=${catVal.cid}"/>"> ${catVal.name } </a></li>
 </c:forEach></ul></li>
   
 
@@ -80,7 +80,7 @@
 
 <c:if test="${pageContext.request.userPrincipal.name!=null }">
 
-    <li><a href="${pageContext.request.contextPath}/cart/goToCart">My Cart <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a></li>
+    <li><a class="page-scroll" href="<c:url value="/cart/goToCart"/>">My Cart <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a></li>
 </c:if></ul>
 </sec:authorize>
  

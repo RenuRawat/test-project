@@ -21,7 +21,7 @@
 <div class="container">
 
 <h4>
-<img src="<c:url value="/images/cart.jpg"/>" width="140" height="110"   /> &nbsp; YOUR CART</h4>
+<img src="<c:url value="/images/cart.jpg"/>" width="140" height="110"/> &nbsp; YOUR CART</h4>
 <table id="cart" class="table table-hover table-condensed">
 <thead> 
 <tr>
@@ -33,7 +33,6 @@
 <th>Total</th>
 <th>Action</th>
 </tr></thead>
-
 <tbody>
 <c:if test="${empty cartInfo }">
 <tr>
@@ -52,12 +51,10 @@
 
 <td><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></td>
 
-
-
 <td class="actions" data-th="">
-<a href="${pageContext.request.contextPath }/cart/goToCart" class="btn btn-info btn-md"><i class="fa fa-refresh"></i></a>
-<a href="${pageContext.request.contextPath }/deleteCart/${c.cartId}" class="btn btn-danger btn-md"><i class="fa fa-trash-o"></i></a></td>
-<c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity }"></c:set>
+<a href="<c:url value="/cart/goToCart" />" class="btn btn-info btn-md" ><i class="fa fa-refresh"></i></a>
+<a href="<c:url value="/deleteCart/${c.cartId}"/>" class="btn btn-danger btn-md"><i class="fa fa-trash-o"></i></a></td>
+<c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity}"></c:set>
 
 
 </tr></c:forEach>
@@ -76,7 +73,7 @@
 <i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 <c:if test="${not empty cartInfo }">
 <td colspan="4" class="hidden-xs"></td>
-<td><a href="${pageContext.request.contextPath }/cart/checkout" class="btn btn-success btn-block">Checkout
+<td><a href="<c:url value="/cart/checkout" />" class="btn btn-success btn-block">Checkout
 <i class="fa fa-angle-right"></i></a></td>
 </c:if></tr>
 </tfoot>

@@ -11,6 +11,8 @@
   <title>GADGET Shop</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--  <link href="assets/mycss/background.css" rel="stylesheet"> -->
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></script>
@@ -23,7 +25,7 @@
 <jsp:include page="Header.jsp"></jsp:include>
 
 <br><br><br>
-<div class="container">
+<div class="container" style="width:95%;">
   
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -75,7 +77,7 @@
 
 
 
-<div class="container">
+<div class="container" >
     <div class="row">
         <div class="col-md-4">
               <div class="thumbnail">

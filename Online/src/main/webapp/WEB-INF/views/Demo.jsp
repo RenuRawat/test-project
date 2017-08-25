@@ -6,87 +6,97 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="assets/mycss/listDlt.css" rel="stylesheet">
+<link href="assets/mycss/checkout.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="/resources/bootstrap.css">
-
-<title>Login Page</title>
 </head>
-<body>
+<body><br><br>
 <jsp:include page="Header.jsp"></jsp:include>
-<br><br><br>
+<br><br><br><br>
+
 <div class="container">
+           
+                
+          <center> <div class="row cart-body">
 
-<h4><img src="images/cart.jpg" style="width:10%;"> &nbsp; YOUR CART</h4>
-<table id="cart" class="table table-hover table-condensed">
-<thead> 
-<tr>
-<th>Sr.no.</th>
-<th>Product Name</th>
-<th>Quantity</th>
-<th>price</th>
-<th>Image</th>
-<th>Total</th>
-<th>Action</th>
-</tr></thead>
-
-<tbody>
-<c:if test="${empty cartInfo }">
-<tr>
-<td colspan="9" align="center">No Record Exists</td></tr>
-</c:if>
-
-<c:forEach var="c" varStatus="st" items="${cartInfo }">
-<tr>
-<td><c:out value="${st.count }"></c:out></td>
-<td><c:out value="${c.cartProductName }"></c:out></td>
-<td><c:out value="${c.cartQuantity }"></c:out></td>
-<td><c:out value="${c.cartPrice }"></c:out></td>
-
-
-<td><img src="${pageContext.request.contextPath }/resources/${c.cartImage }" height="30px" width="30px"></td>
-
-<td><c:out value="${c.cartQuantity * c.cartPrice }"></c:out></td>
-
-
-
-<td class="actions" data-th="">
-<a href="${pageContext.request.contextPath }/cart/goToCart" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></a>
-<a href="${pageContext.request.contextPath }/deleteCart/${c.cartId}" class="btn btn-danger btn-md"><i class="fa fa-trash-o"></i></a></td>
-<c:set var="gtot" value= "${gtot + c.cartPrice * c.cartQuantity }"></c:set>
-
-
-</tr></c:forEach>
-
-
-
-
-<tr>
-
-<td><span class="col-lg-9" align="right"><label>Grand Total</label><c:out value="${gtot }"></c:out></span></td>
-</tr>
-</tbody>
-
-<tfoot>
-<tr>
-<br>
-<td><a href="${pageContext.request.contextPath }/index" class="btn btn-warning">
-<i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-<c:if test="${not empty cartInfo }">
-<td colspan="4" class="hidden-xs"></td>
-<td><a href="${pageContext.request.contextPath }/checkout" class="btn btn-success btn-block">Checkout
-<i class="fa fa-angle-right"></i></a></td>
-</c:if></tr>
-</tfoot>
-</table>
-
+              <form action="form-horizontal" method="post">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+               
+                  
+ 
+ <div class="panel panel-info">
+<div class="panel-heading">Invoice Process</div>
+<div class="panel-body">
+<fieldset>
+<div class="form-group">
+<label class="col-md-4 control-label" for="username">Customer Name</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="username">${orderDetails.username}</label>
 </div>
+</div><br>
 
-</body>
-</html>
+<div class="form-group">
+<label class="col-md-4 control-label" for="email">Customer Email Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="email">${orderDetails.email}</label>
+</div></div><br><br>
+
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.address}</label>
+</div></div><br>
+
+
+
+<div class="form-group">
+<label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>
+<div class="col-md-6">
+<label class="col-md-6 control-label" for="deliverydate">Delivery in 7 Working day</label>
+</div></div><br><br>
+
+
+<div class="form-group">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<a class="btn btn-success btn-block" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoice" class="btn btn-primary"> Ok </a>
+</div></div><br>
+
+</fieldset>
+</div></div>
+</div></form>
+</div></center>
+               
+          <div class="row cart-footer">
+        
+            </div></div>
+            
+            
+           </body></html>
+           
+           
+           
+           
+           
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -234,7 +234,7 @@ import com.Model.Supplier;
 		return mav;
 	}
 	
-	@RequestMapping("/deleteProduct/{pid}")
+	@RequestMapping("/deleteProduct{pid}")
 	public String deleteProduct(@PathVariable("pid") int pid) 
 	{
 	  proDaoImpl.deleteProduct(pid);
