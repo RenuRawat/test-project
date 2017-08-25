@@ -21,7 +21,7 @@ $(".alert").alert()
 <br><br><br><br><br><br>
 
 <center><div class="alert alert-success" role="alert">
-  <h2 class="alert-heading"> Unauthorize User Email</h2></div>
+  <h2 class="alert-heading">You are not authorized to access this page.</h2></div>
 
 <h2><a href="${pageContext.request.contextPath}/index">Go to Home</a></h2></center>
 </body>

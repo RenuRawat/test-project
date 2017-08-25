@@ -3,16 +3,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-<!--  <html>
-<head>
-  <title>Product List</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head> -->
-
 
 
 <!DOCTYPE html>
@@ -61,19 +51,6 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
     </style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<!--     <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
-        }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
-        });
-    </script> -->
-
 
 
 
@@ -164,7 +141,8 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 
 <security:authorize access="hasRole('ROLE_USER')">
 
-<input type="number"  class="form-control" name="quant" required/><br>
+<input type="number" min="1" step="1" class="form-control" name="quant" required/><br>
+
 
 
 
@@ -192,44 +170,22 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 
 
 
-<!-- 
-<script type="text/javascript">
-	   $(document).ready(function(){
-            //-- Click on detail
-            $("ul.menu-items > li").on("click",function(){
-                $("ul.menu-items > li").removeClass("active");
-                $(this).addClass("active");
-            })
-
-            $(".attr,.attr2").on("click",function(){
-                var clase = $(this).attr("class");
-
-                $("." + clase).removeClass("active");
-                $(this).addClass("active");
-            })
-
-            //-- Click on QUANTITY
-            $(".btn-minus").on("click",function(){
-                var now = $(".section > div > input").val();
-                if ($.isNumeric(now)){
-                    if (parseInt(now) -1 > 0){ now--;}
-                    $(".section > div > input").val(now);
-                }else{
-                    $(".section > div > input").val("1");
-                }
-            })            
-            $(".btn-plus").on("click",function(){
-                var now = $(".section > div > input").val();
-                if ($.isNumeric(now)){
-                    $(".section > div > input").val(parseInt(now)+1);
-                }else{
-                    $(".section > div > input").val("1");
-                }
-            })                        
-        }) 
-	</script> -->
 
 
+
+<script>
+$(document).ready(function(){
+$('input').focusout(function(){
+	var max = $(this).val();
+	var available = ${product.stock};
+	if(max > available){
+		$(this).val(available-1);
+	alert("Maximum is" + available);
+	}
+})
+});
+
+</script>
 
 
 </body>

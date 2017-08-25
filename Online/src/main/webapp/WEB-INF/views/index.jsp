@@ -85,7 +85,7 @@
                 <div class="caption">
                   <h4 class="pull-right">Rs: 14000</h4>
                   <h4><a href="#">Smart Phone</a></h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <p>Samsung j7</p>
                 </div>
                 <div class="ratings">
                   <p>
@@ -111,7 +111,7 @@
                 <div class="caption">
                   <h4 class="pull-right">Rs: 45000</h4>
                   <h4><a href="#">Laptop</a></h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <p>Hp Touchscreen Laptop</p>
                 </div>
                 <div class="ratings">
                   <p>
@@ -137,7 +137,7 @@
                 <div class="caption">
                   <h4 class="pull-right">Rs: 500</h4>
                   <h4><a href=  "#">Head Phone</a></h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <p>Sony Headphone</p>
                 </div>
                 <div class="ratings">
                   <p>
@@ -181,7 +181,6 @@
                             <span class="glyphicon glyphicon-star"></span>
                             (15 reviews)
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <h3 class="cost"><span class="glyphicon glyphicon-ind"></span>Rs: 14000 <small class="pre-cost"><span class="glyphicon glyphicon-ind"></span>Rs: 15000</small></h3>
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-xs-12">
@@ -248,7 +247,6 @@
                             <span class="glyphicon glyphicon-star"></span>
                             (10 reviews)
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <h3 class="cost"><span class="glyphicon glyphicon-ind"></span>Rs: 45000 <small class="pre-cost"><span class="glyphicon glyphicon-ind"></span>Rs: 44500</small></h3>
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-xs-12">
@@ -312,7 +310,6 @@
                             <span class="glyphicon glyphicon-star"></span>
                             (20 reviews)
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <h3 class="cost"><span class="glyphicon glyphicon-ind"></span>Rs: 500 <small class="pre-cost"><span class="glyphicon glyphicon-ind"></span>Rs: 450</small></h3>
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-xs-12">
