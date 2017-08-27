@@ -1,5 +1,6 @@
 package com.DaoImpl;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 
 import com.Model.Orders;
+import com.Model.User;
 
 @Repository("OrdersDaoImpl")
 public class OrdersDaoImpl {
@@ -29,5 +31,24 @@ public class OrdersDaoImpl {
 			  session.getTransaction().commit();	
 			  
 	  }
+	  
+/*	  public User findById(String email) {
+			
+			Session session= sessionFactory.openSession();
+			User u =null;
+			try {
+			session.beginTransaction();
+			u = session.get(User.class, email);
+			session.getTransaction().commit();
+			}
+			catch (HibernateException ex)
+			{
+			 ex.printStackTrace();
+			 session.getTransaction().rollback(); // It will not fetch the Id
+			}
+			return u;
+			}*/
+	}
+	  
 
-}
+

@@ -25,7 +25,7 @@
 <jsp:include page="Header.jsp"></jsp:include>
 
 <br><br><br>
-<div class="container" style="width:95%;">
+<div class="container" style="width:80%;" "height:40px;" >
   
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -41,21 +41,21 @@
     <div class="carousel-inner">
     <div class="item active">
       
-        <img src="images/18mhmy91qqy4pjpg.jpg" style="width:100%;">
+        <img src="images/18mhmy91qqy4pjpg.jpg" style="width:100%;" "height:40px;">
       </div>
        <div class="item">
-        <img src="images/slide.jpg" style="width:100%;">
+        <img src="images/slide.jpg" style="width:100%;" "height:40px;">
       </div>
        <div class="item">
-        <img src="images/lappy2.jpg" style="width:100%;">
+        <img src="images/lappy2.jpg" style="width:100%;" "height:40px;">
       </div>
 
       <div class="item">
-        <img src="images/col1.jpg" style="width:100%;">
+        <img src="images/col1.jpg" style="width:100%;" "height:40px;">
       </div>
     
       <div class="item">
-        <img src="images/col2.jpg" style="width:100%;">
+        <img src="images/col2.jpg" style="width:100%;" "height:40px;">
       </div>
     </div>
 

@@ -32,8 +32,7 @@
 <form method="post" action="<c:url value="/admin/savecategory"/>"
 class="form-signin">
 <span id="reauth-email" class="reauth-email"></span>
-<h4 class="input-title">Category ID</h4>
-<input class="form-control" type="number" name="cid" required />
+
 <h4 class="input-title">Category Name</h4>
 <input class="form-control" type="text" name="name" required /><br>
 <button class="btn btn-lg btn-primary" type="submit">Save</button>
@@ -45,8 +44,7 @@ class="form-signin">
 <form method="post" action="<c:url value="/admin/savesupplier"/>"
 class="form-signin">
 <span id="reauth-email" class="reauth-email"></span>
-<h4 class="input-title">Supplier ID</h4>
-<input class="form-control" type="number" name="sid" required />
+
 <h4 class="input-title">Supplier Name</h4>
 <input class="form-control" type="text" name="suppliername" required /><br>
 <button class="btn btn-lg btn-primary" type="submit">Save</button>

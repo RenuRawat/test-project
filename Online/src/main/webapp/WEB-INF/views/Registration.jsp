@@ -106,15 +106,6 @@ border: 1px solid red;
 </div></div></div> -->
 
 <div class="form-group has error has-feedback has success">
-<label for ="address" class="cols-sm-2 control-label">Address</label>
-<div class="cols-sm-10">
-<errors path="address" cssClass="err"/>
-<div class="input-group">
-<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
-<input type="text"  name="address" path="address" class="form-control" placeholder="Enter Your Address" required/>
-</div></div></div>
-
-<div class="form-group has error has-feedback has success">
 <label for ="phone" class="cols-sm-2 control-label">Phone</label>
 <div class="cols-sm-10">
 <errors path="phone" cssClass="err"/>
@@ -122,6 +113,66 @@ border: 1px solid red;
 <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
 <input type="text"  name="phone" path="phone" class="form-control" placeholder="Enter Your Phone" required/>
 </div></div></div>
+
+
+
+<div class="form-group has error has-feedback has success">
+<label for ="addressline1" class="cols-sm-2 control-label">Address line1</label>
+<div class="cols-sm-10">
+<errors path="addressline1" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="addressline1" path="addressline1" class="form-control" placeholder="Enter Your Address line1" required/>
+</div></div></div>
+
+<div class="form-group has error has-feedback has success">
+<label for ="addressline2" class="cols-sm-2 control-label">Address line2</label>
+<div class="cols-sm-10">
+<errors path="addressline2" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="addressline2" path="addressline2" class="form-control" placeholder="Enter Your Address line2" required/>
+</div></div></div>
+
+<div class="form-group has error has-feedback has success">
+<label for ="city" class="cols-sm-2 control-label">City</label>
+<div class="cols-sm-10">
+<errors path="city" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="city" path="city" class="form-control" placeholder="Enter Your City" required/>
+</div></div></div>
+
+<div class="form-group has error has-feedback has success">
+<label for ="state" class="cols-sm-2 control-label">State</label>
+<div class="cols-sm-10">
+<errors path="state" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="state" path="state" class="form-control" placeholder="Enter Your State" required/>
+</div></div></div>
+
+<div class="form-group has error has-feedback has success">
+<label for ="pincode" class="cols-sm-2 control-label">Pin code</label>
+<div class="cols-sm-10">
+<errors path="state" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="pincode" path="pincode" class="form-control" placeholder="Enter Your pincode" required/>
+</div></div></div>
+
+<div class="form-group has error has-feedback has success">
+<label for ="country" class="cols-sm-2 control-label">Country</label>
+<div class="cols-sm-10">
+<errors path="country" cssClass="err"/>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+<input type="text"  name="country" path="country" class="form-control" placeholder="Enter Your Country" required/>
+</div></div></div>
+
+
+
+
 <div class="form-group">
 <button type="submit" value="register" class="btn btn-primary btn-lg btn-block login-button">Register</button>
 </div>

@@ -34,13 +34,72 @@ public class User implements Serializable {
 	
 	 private String role;
 	
-	 @NotNull(message="Address is Null")
-	 private String address;
+	 @NotNull(message="Addressline1 is Null")
+	 private String addressline1;
+	 
+	 
+	 
+	 //////////////////////////////////////////////////////////////////////////
+	 @NotNull(message="Addressline2 is Null")
+	 private String addressline2;
+	 @NotNull(message="City is Null")
+	 private String city;
+	 @NotNull(message="State is Null")
+	 private String state;
+	 @NotNull(message="Pin Code is Null")
+	 private String pincode;
+	 @NotNull(message="Country is Null")
+	 private String country;
+	 
+	 
+	 
+	 
+	 
+	 
+	 public String getAddressline1() {
+		return addressline1;
+	}
+	public void setAddressline1(String addressline1) {
+		this.addressline1 = addressline1;
+	}
+	public String getAddressline2() {
+		return addressline2;
+	}
+	public void setAddressline2(String addressline2) {
+		this.addressline2 = addressline2;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getPincode() {
+		return pincode;
+	}
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	 
+	 /////////////////////////////////////////////////////////////////////////
+	 
 	 
 	
 	 /*@Pattern(regexp="[\\d]{10}" , message="please enter digits")*/
-	 
-	 @Pattern(regexp="^[789]\\d{9}$",message="number should be of 10 digits,and begins 9,8,7 since in india")
+
+	@Pattern(regexp="^[789]\\d{9}$",message="number should be of 10 digits,and begins 9,8,7 since in india")
 	 @NotNull
 	 @Size(min=8, max=10, message="Enter correct number")
 	 private String phone;
@@ -81,12 +140,7 @@ public class User implements Serializable {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
+
 	public String getPhone() {
 		return phone;
 	}

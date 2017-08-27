@@ -39,7 +39,7 @@
 <div class="form-group">
 <label class="col-md-4 control-label" for="username">Customer Name</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="username">${orderDetails.username}</label>
+<label class="col-md-4 control-label" for="username">${orderDetails.sname}</label>
 </div>
 </div><br>
 
@@ -52,8 +52,43 @@
 <div class="form-group">
 <label class="col-md-4 control-label" for="address">Shipping Address</label>
 <div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.address}</label>
+<label class="col-md-4 control-label" for="address">${orderDetails.sadd1}</label>
 </div></div><br>
+
+
+
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.sadd2}</label>
+</div></div><br>
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.scity}</label>
+</div></div><br>
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.sstate}</label>
+</div></div><br>
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.spincode}</label>
+</div></div><br>
+<div class="form-group">
+<label class="col-md-4 control-label" for="address">Shipping Address</label>
+<div class="col-md-4">
+<label class="col-md-4 control-label" for="address">${orderDetails.country}</label>
+</div></div><br>
+
+
+
+
+
+
+
 
 <%-- <div class="form-group">
 <label class="col-md-4 control-label" for="address">Total Amount</label>

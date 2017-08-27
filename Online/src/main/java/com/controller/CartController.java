@@ -2,6 +2,7 @@ package com.controller;
 
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -163,24 +164,25 @@ public ModelAndView checkoutProcess(HttpServletRequest request)
 
 
 
-@RequestMapping(value="/invoiceprocess", method = RequestMethod.GET) 
+@RequestMapping(value="/invoiceprocess", method = RequestMethod.POST) 
 
-public ModelAndView orderSave(HttpServletRequest req)
+public ModelAndView orderSave(HttpServletRequest request)
  {
 	ModelAndView mav= new ModelAndView("invoice");
 	Orders ord=new Orders();
-	Principal principal = req.getUserPrincipal();
-	
+	Principal principal = request.getUserPrincipal();
 	String userEmail = principal.getName();
-	
-	String payment= (req.getParameter("payment"));
-	
- 	//Double total=(Double.parseDouble(req.getParameter("total")));
-     
+
 	User user= userDaoImpl.findById(userEmail);
 	
+	String payment= (request.getParameter("payment"));
+	
+ 	Double total=(Double.parseDouble(request.getParameter("total")));
+     
+	
+	
 	ord.setUser(user);
-	//ord.setTotal(total);
+	ord.setTotal(total);
 	ord.setPayment(payment);
 	
     ordersDaoImpl.insertOrders(ord);
@@ -190,6 +192,15 @@ public ModelAndView orderSave(HttpServletRequest req)
 
     return mav;
  }          
+
+
+
+
+
+
+
+
+
 
 
 
