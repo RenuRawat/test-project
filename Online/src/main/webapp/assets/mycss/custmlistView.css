@@ -1,0 +1,29 @@
+        .product_view .modal-dialog{max-width: 800px; width: 100%;}
+        .pre-cost{text-decoration: line-through; color: #a5a5a5;}
+        .space-ten{padding: 10px 0;}
+        
+        
+        
+        
+        
+        
+        /* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+/* General Styles */
+
+body {
+  font-size: 16px;
+  line-height: 25px;
+  padding-top: 50px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #e7e7e7;
+    padding-bottom:50px;
+}
+.color-invoice{
+  background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    padding-top:100px;
+    padding-bottom:100px;
+}

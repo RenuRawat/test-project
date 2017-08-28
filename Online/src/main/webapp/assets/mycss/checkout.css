@@ -310,3 +310,44 @@ hr{
         overflow-x: hidden;
     }
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+/* General Styles */
+
+body {
+  font-size: 16px;
+  line-height: 25px;
+  padding-top: 50px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #e7e7e7;
+    padding-bottom:50px;
+}
+.color-invoice{
+  background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    padding-top:100px;
+    padding-bottom:100px;
+}

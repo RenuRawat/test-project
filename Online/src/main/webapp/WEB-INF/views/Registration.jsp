@@ -75,7 +75,7 @@ border: 1px solid red;
 <errors path="email" cssClass="err"/>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-<input type="text" id="inputEmail" name="email" path="email" class="form-control" placeholder="Enter Your Email" "required" />
+<input type="text" id="inputEmail" name="email" path="email" class="form-control" placeholder="Enter Your Email" required />
 </div></div></div>
 
 <div class="form-group has error has-feedback has success">

@@ -164,7 +164,7 @@ public ModelAndView checkoutProcess(HttpServletRequest request)
 
 
 
-@RequestMapping(value="/invoiceprocess", method = RequestMethod.POST) 
+@RequestMapping(value="/invoiceprocess", method = RequestMethod.GET) 
 
 public ModelAndView orderSave(HttpServletRequest request)
  {
@@ -173,16 +173,16 @@ public ModelAndView orderSave(HttpServletRequest request)
 	Principal principal = request.getUserPrincipal();
 	String userEmail = principal.getName();
 
-	User user= userDaoImpl.findById(userEmail);
+/*	User user= userDaoImpl.findById(userEmail);
 	
-	String payment= (request.getParameter("payment"));
+	String payment= (req.getParameter("payment"));
 	
- 	Double total=(Double.parseDouble(request.getParameter("total")));
+ 	//Double total=(Double.parseDouble(req.getParameter("total")));
      
 	
 	
 	ord.setUser(user);
-	ord.setTotal(total);
+	//ord.setTotal(total);
 	ord.setPayment(payment);
 	
     ordersDaoImpl.insertOrders(ord);
@@ -191,9 +191,43 @@ public ModelAndView orderSave(HttpServletRequest request)
     mav.setViewName("invoice");
 
     return mav;
- }          
+ } */         
 
 
+//Double total= Double.parseDouble(request.getParameter("total"));
+String payment= request.getParameter("payment");
+
+String shipName = request.getParameter("sname");
+String shipadd1 = request.getParameter("sadd1");
+String shipadd2 = request.getParameter("sadd2");
+String shipcity = request.getParameter("scity");
+String shipstate = request.getParameter("sstate");
+String spincode = request.getParameter("spincode");
+             
+List<String> list = new ArrayList<String>();
+list.add(shipName);
+list.add(shipadd1);
+list.add(shipadd2);
+list.add(shipcity);
+list.add(shipstate);
+list.add(spincode);
+mav.addObject("list", list);
+System.out.println("after list creation");
+User user= userDaoImpl.findById(userEmail);
+List<Cart> cart = cartDaoImpl.findCartById(userEmail);
+System.out.println(cart);
+ord.setUser(user);
+//ord.setTotal(total);
+ord.setPayment(payment);
+ordersDaoImpl.insertOrders(ord);
+mav.addObject("order", ord);
+mav.addObject("cart", cart);
+mav.addObject("orderDetails", user);
+
+
+
+return mav;
+}          
 
 
 

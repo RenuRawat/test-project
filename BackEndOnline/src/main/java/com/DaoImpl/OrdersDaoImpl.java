@@ -27,7 +27,7 @@ public class OrdersDaoImpl {
 			  session.beginTransaction();
 			  
 			  // value get nd set from the User(Getter ns Setter method////
-			  session.save(orders);
+			  session.persist(orders);
 			  session.getTransaction().commit();	
 			  
 	  }

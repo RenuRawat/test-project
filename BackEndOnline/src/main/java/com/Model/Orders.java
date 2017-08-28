@@ -32,7 +32,7 @@ public class Orders {
 	
 	
 	////////////////////////////////////////////////////
-//	@NotEmpty(message="Enter the name")
+/*//	@NotEmpty(message="Enter the name")
 	private String sname;
 //	@NotNull(message="Addressline1 is Null")
 	private String sadd1;
@@ -84,7 +84,7 @@ public class Orders {
 	public void setSpincode(String spincode) {
 		this.spincode = spincode;
 	}
-	
+	*/
 	
 	
 	

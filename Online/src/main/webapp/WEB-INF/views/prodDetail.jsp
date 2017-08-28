@@ -53,7 +53,7 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 
-
+<link href="assets/mycss/custmlistView.css" rel="stylesheet">
 
 
 </head>
