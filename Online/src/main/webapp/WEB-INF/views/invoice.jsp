@@ -22,7 +22,7 @@
                 
          
 
-<form action="form-horizontal" method="post">
+<form action="/cart/invoiceprocess" method="post">
                
                
                   
@@ -146,6 +146,10 @@
           <div class="col-lg-5 col-md-5 col-sm-5">
          <label>   <h3>Customer Contact :</h3> Mob: ${orderDetails.phone}</label>
             <br><label>${orderDetails.email}</label>
+           
+           <br><label>${order.sstate}</label>
+            <h3>${order.sname}</h3>
+          
           </div>
         </div>
         <hr />
@@ -212,16 +216,7 @@
               <h4><label>Grand Total</label><c:out value="${gtot }"></c:out></h4>
             </div></div>
             <hr>
-<!--             <div>
-              <h4>  Taxes : 4400 USD ( 20 % on Total Bill ) </h4>
-            </div>
-            <hr> -->
-<!--             <div>
-              <h3>  Bill Amount : 26400 USD </h3>
-            </div>
-            <hr /> -->
-          </div>
-        </div>
+           
   <!--       <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <strong> Important: </strong>
@@ -244,7 +239,7 @@
           <div class="col-lg-12 col-md-12 col-sm-12">
             <a href="#" class="btn btn-success btn-sm">Print Invoice</a>    
             <a href="#" class="btn btn-info btn-sm">Download In Pdf</a>
-            <a class="btn btn-primary btn-sm" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoice" > Ok </a>
+            <a class="btn btn-primary btn-sm" href="${pageContext.request.contextPath }/cart/Thankyou" type="submit" name="invoice" > Ok </a>
 
           </div>
         </div>
@@ -261,25 +256,13 @@
 
 
 
-
-
-
-
-<%-- 
-<center><div class="form-group">
-<div class="col-md-4 control-label">
-<a class="btn btn-success btn-block" role="button" href="${pageContext.request.contextPath }/Thankyou" type="submit" name="invoice" class="btn btn-primary"> Ok </a>
-</div></div></center><br>
-
-</fieldset>
-</div></div>
-</div></form>
-</div></center>
                
           <div class="row cart-footer">
         
-            </div></div> --%>
-            
+            </div></div> 
+     
+     
+         
             
            </body></html>
            

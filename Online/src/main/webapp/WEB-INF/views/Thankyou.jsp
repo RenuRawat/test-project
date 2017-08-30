@@ -25,6 +25,7 @@
 	
 	<div class="container" style="margin-top:5%;">
 	<div class="row">
+	
         <div class="jumbotron" style="box-shadow: 2px 2px 4px #000000;">
             <h2 class="text-center">Thank you <span style="color:#F89406;"> for </span><span style="color:#26A65B;">Shopping </span><span style="color:#19B5FE;">here</span></h2>
             <center><div class="btn-group" style="margin-top:50px;">

@@ -37,39 +37,30 @@
 
 
                     
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+<div class="col-lg-6 col-md-6 col-sm-6 ">
               
-
-  <form action="${pageContext.request.contextPath}/invoiceprocess" method="post">
-  <span id="reauth-email" class="reauth-email"></span>
 
 
 
 
 <div class="panel panel-info">
 
-                        <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
-                        <div class="panel-body">
+<div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
+<div class="panel-body">
                         
                         
-<!--                         
- <div class="form-group has error has-feedback has success">
-<label for ="country" class="cols-sm-2 control-label">Country</label>
-<div class="cols-sm-10">
-<errors path="country" cssClass="err"/>
-<div class="input-group">
-<span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
-<input type="text"  name="country" path="country" class="form-control" placeholder="Enter Your Country" required/>
-</div></div></div> -->
+  <form  action="${pageContext.request.contextPath}/cart/invoiceprocess">
+  <span id="reauth-email" class="reauth-email"></span>
                         
                         
+       
                         
                         
-                        
-                            <div class="form-group">
-                                <div class="col-md-12"><strong>Card Type:</strong></div>
-                                <div class="col-md-12">
-                                    <select id="CreditCardType" name="CreditCardType" class="form-control">
+                            <div class="form-group has error has-feedback has success">
+                               
+                                <div class="col-md-12"><strong>Card Type:</strong>
+                                <errors path="CreditCardType" cssClass="err"/>
+                                    <select id="CreditCardType" name="CreditCardType" path="CreditCardType" class="form-control">
                                         <option value="5">Visa</option>
                                         <option value="6">MasterCard</option>
                                         <option value="7">American Express</option>
@@ -77,20 +68,34 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-12"><strong>Credit Card Number:</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12"><strong>Card CVV:</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_code" value="" /></div>
-                            </div>
-                            <div class="form-group">
+                            
+<div class="form-group has error has-feedback has succes">
+<div for ="card_name" class="col-md-12" control-label"><strong>Credit Card Name:</strong>
+<errors path="card_name" cssClass="err"/>
+<input type="text" class="form-control" path="card_name" name="card_name" placeholder="Enter Your Card Name" required /></div>
+ </div>
+                            
+                            
+<div class="form-group has error has-feedback has succes">
+<div for ="card_number" class="col-md-12" control-label"><strong>Credit Card Number:</strong>
+<errors path="card_number" cssClass="err"/>
+<input type="text" id="card_number" size="24" maxlength="16" class="form-control" path="card_number" id="card_number" name="card_number" placeholder="Enter Your Card Number" required /></div>
+ </div>
+
+<div class="form-group has error has-feedback has succes">
+<div for ="cvv_number" class="col-md-12" control-label"><strong>CVV Code:</strong>
+<errors path="cvv_number" cssClass="err"/>
+<input type="text" class="form-control" path="cvv_number" name="cvv_number" placeholder="Enter Your CVV Code" required /></div>
+ </div>
+
+
+                            <div class="form-group has error has-feedback has succes">
                                 <div class="col-md-12">
                                     <strong>Expiration Date</strong>
                                 </div>
+                                <errors path="expirationmnth" cssClass="err"/>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <select class="form-control" name="">
+                                    <select class="form-control has error has-feedback has succes" name="expirationmnth">
                                         <option value="">Month</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -106,8 +111,9 @@
                                         <option value="12">12</option>
                                 </select>
                                 </div>
+                                <errors path="expirationyear" cssClass="err"/>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <select class="form-control" name="">
+                                    <select class="form-control has error has-feedback has succes" name="expirationyear">
                                         <option value="">Year</option>
                                         <option value="2017">2017</option>
                                         <option value="2018">2018</option>
@@ -137,25 +143,47 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-       
-
-                               
-<a href="${pageContext.request.contextPath }/cart/invoiceprocess" role="button" type="submit" class="btn btn-primary btn-submit-fix">PROCEED</a>
-                                </div>
+<button type="${pageContext.request.contextPath }/cart/invoiceprocess"  class="btn btn-primary btn-lg btn-block login-button">Payment</button>
+</div></form></div>
                             </div>
                         </div>
-                    </div></form>
-                    <!--CREDIT CART PAYMENT END-->
-                </div>
-                
-                
-                
+                    </div>
+                   
+                </div> 
+
+
+
+
+
+
+
+  
+
+
             <div class="row cart-footer">
         
             </div></div></div>
+            
+           
+            
+            
+<!--  <script type="text/javascript">
+ onclick="cardnumber(document.form1.text1
+ function cardnumber(card_number)  
+ {  
+   var cardno = /^(?:5[1-5][0-9]{14})$/;  
+   if(card_number.value.match(cardno))  
+         {  
+       return true;  
+         }  
+       else  
+         {  
+         alert("Not a valid Mastercard number!");  
+         return false;  
+         }  
+ }  
+</script>  -->         
     
 </body>
-</html>
-                
+</html>        
                 

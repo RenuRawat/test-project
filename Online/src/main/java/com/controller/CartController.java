@@ -6,8 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.transaction.Transactional;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,6 +28,7 @@ import com.DaoImpl.UserDaoImpl;
 import com.Model.Cart;
 import com.Model.Orders;
 import com.Model.Product;
+import com.Model.Supplier;
 import com.Model.User;
 
 @Controller
@@ -164,66 +170,54 @@ public ModelAndView checkoutProcess(HttpServletRequest request)
 
 
 
-@RequestMapping(value="/invoiceprocess", method = RequestMethod.GET) 
 
-public ModelAndView orderSave(HttpServletRequest request)
+@RequestMapping(value="/invoiceprocess", method = RequestMethod.POST) 
+//public ModelAndView orderSave(@Valid @ModelAttribute("user") User user, BindingResult result) {
+public ModelAndView orderSave(@Valid HttpServletRequest request)
  {
 	ModelAndView mav= new ModelAndView("invoice");
-	Orders ord=new Orders();
+	
 	Principal principal = request.getUserPrincipal();
 	String userEmail = principal.getName();
-
-/*	User user= userDaoImpl.findById(userEmail);
-	
-	String payment= (req.getParameter("payment"));
-	
- 	//Double total=(Double.parseDouble(req.getParameter("total")));
-     
 	
 	
-	ord.setUser(user);
-	//ord.setTotal(total);
-	ord.setPayment(payment);
+//	int orderId = (Integer.parseInt(request.getParameter("orderId")));
 	
-    ordersDaoImpl.insertOrders(ord);
-   
-    mav.addObject("orderDetails", user);
-    mav.setViewName("invoice");
-
-    return mav;
- } */         
-
-
-//Double total= Double.parseDouble(request.getParameter("total"));
-String payment= request.getParameter("payment");
-
-String shipName = request.getParameter("sname");
-String shipadd1 = request.getParameter("sadd1");
-String shipadd2 = request.getParameter("sadd2");
-String shipcity = request.getParameter("scity");
-String shipstate = request.getParameter("sstate");
-String spincode = request.getParameter("spincode");
-             
-List<String> list = new ArrayList<String>();
-list.add(shipName);
-list.add(shipadd1);
-list.add(shipadd2);
-list.add(shipcity);
-list.add(shipstate);
-list.add(spincode);
-mav.addObject("list", list);
+	String shipemail = request.getParameter("semail");
+	String shipphone = request.getParameter("sphone");
+	String shipname = request.getParameter("sname");
+	String shipadd1 = request.getParameter("sadd1");
+	String shipadd2 = request.getParameter("sadd2");
+	String shipcity = request.getParameter("scity");
+	String shipstate = request.getParameter("sstate");
+	String shipcode = request.getParameter("spincode");
+	String shipcountry = request.getParameter("scountry");
+	
+	Orders ord=new Orders();
+//	ord.setOrderId(orderId);
+	ord.setSemail(shipemail);
+	ord.setSphone(shipphone);
+	ord.setSname(shipname);
+	ord.setSadd1(shipadd1);
+	ord.setSadd2(shipadd2);
+	ord.setScity(shipcity);
+	ord.setSstate(shipstate);
+	ord.setSpincode(shipcode);
+	ord.setScountry(shipcountry);
+	
+	
 System.out.println("after list creation");
 User user= userDaoImpl.findById(userEmail);
+//Orders or=ordersDaoImpl.findByOrderId(userEmail);
 List<Cart> cart = cartDaoImpl.findCartById(userEmail);
 System.out.println(cart);
 ord.setUser(user);
 //ord.setTotal(total);
-ord.setPayment(payment);
+//ord.setPayment(payment);
 ordersDaoImpl.insertOrders(ord);
 mav.addObject("order", ord);
 mav.addObject("cart", cart);
 mav.addObject("orderDetails", user);
-
 
 
 return mav;
@@ -271,5 +265,30 @@ mv.setViewName("cart");
 return mv;
 
 }
+
+
+@RequestMapping("/Thankyou")
+public ModelAndView thankyou( HttpServletRequest req)
+ {
+              ModelAndView mv= new ModelAndView();
+              Principal principal = req.getUserPrincipal();
+              String userEmail =principal.getName();
+              User user =userDaoImpl.findById(userEmail);
+             List<Cart> cart = cartDaoImpl.findCartById(userEmail);
+          
+             for(Cart cartItem : cart){
+             int id = cartItem.getCartId();
+             cartDaoImpl.deleteCart(id);
+          
+             }
+   
+    mv.setViewName("Thankyou");
+    return mv;
+
+ 
+}
+
+
+
 } 
 	

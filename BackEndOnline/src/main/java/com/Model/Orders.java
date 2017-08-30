@@ -10,7 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
@@ -32,22 +35,51 @@ public class Orders {
 	
 	
 	////////////////////////////////////////////////////
-/*//	@NotEmpty(message="Enter the name")
+	
+	@Email(message="Enter valid Email")
+	@NotEmpty(message="Enter the Email")
+	private String semail;
+	
+	@Pattern(regexp="^[789]\\d{9}$",message="number should be of 10 digits,and begins 9,8,7 since in india")
+	 @NotNull
+	 @Size(min=8, max=10, message="Enter correct number")
+	 private String sphone;
+	
+	@NotEmpty(message="Enter the name")
 	private String sname;
-//	@NotNull(message="Addressline1 is Null")
+	@NotNull(message="Addressline1 is Null")
 	private String sadd1;
-//	@NotNull(message="Addressline2 is Null")
+	@NotNull(message="Addressline2 is Null")
 	private String sadd2;
-//	@NotNull(message="City is Null")
+	@NotNull(message="City is Null")
 	private String scity;
-//	@NotNull(message="State is Null")
+	@NotNull(message="State is Null")
 	private String sstate;
-//	@NotNull(message="Zip is Null")
+	@NotNull(message="Zip is Null")
 	private String spincode;
+	 @NotNull(message="Country is Null")
+	 private String scountry;
 	
 	
 	
-	
+	public String getSemail() {
+		return semail;
+	}
+	public void setSemail(String semail) {
+		this.semail = semail;
+	}
+	public String getSphone() {
+		return sphone;
+	}
+	public void setSphone(String sphone) {
+		this.sphone = sphone;
+	}
+	public String getScountry() {
+		return scountry;
+	}
+	public void setScountry(String scountry) {
+		this.scountry = scountry;
+	}
 	public String getSname() {
 		return sname;
 	}
@@ -84,7 +116,7 @@ public class Orders {
 	public void setSpincode(String spincode) {
 		this.spincode = spincode;
 	}
-	*/
+
 	
 	
 	
