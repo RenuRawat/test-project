@@ -17,8 +17,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
-
-
+<link href="assets/mycss/Registration.css" rel="stylesheet">
+<link href="assets/mycss/footer.css" rel="stylesheet">
 
 
 
@@ -33,8 +33,9 @@
 
 
  <div class='container'>
-<div class='span6 main'>
-
+<!-- <div class='span main'> -->
+<center><div class='span8 main'>
+ <div class="col-md-9 pull-right">
 <div class="page-title">
 <h1>About Us</h1><br>
 </div>
@@ -43,7 +44,7 @@
 <p>We offer an extensive, carefully selected choice of gadgets &amp; innovations, technical, safety &amp; security, boys toys, computer accessories, gifts and corporate &amp; promotional products that will satisfy the need of any gadget-hungry guru!</p>
 <p>We constantly strive to bring you, our valued customer, the best, and most unique, quality assured products the world has on offer. We have a specialized team of buyers and between them they source the most extraordinary and inspirational gifts and gizmos before anyone else can lay their hands on them.</p>
 <p>Founded on amazing inspiration, fed on passion and grown with determination, The <strong>GADGET Shop</strong> is destined to take its place among the retail giants&hellip;</p>
-</div></h4></div>
+</div></h4></div></div></center>
 </div>
 
 

@@ -57,8 +57,8 @@ public class Orders {
 	private String sstate;
 	@NotNull(message="Zip is Null")
 	private String spincode;
-	 @NotNull(message="Country is Null")
-	 private String scountry;
+	/* @NotNull(message="Country is Null")
+	 private String scountry;*/
 	
 	
 	
@@ -74,12 +74,12 @@ public class Orders {
 	public void setSphone(String sphone) {
 		this.sphone = sphone;
 	}
-	public String getScountry() {
+	/*public String getScountry() {
 		return scountry;
 	}
 	public void setScountry(String scountry) {
 		this.scountry = scountry;
-	}
+	}*/
 	public String getSname() {
 		return sname;
 	}

@@ -63,7 +63,8 @@
   <li class="active"><a href="<c:url value="/index"/>">Home</a></li>
     <li><a class="page-scroll" href="<c:url value="/aboutus"/>">About us</a></li>
  <li><a class="page-scroll" href="<c:url value="/contactus"/>">Contact us</a></li> 
- <li><a class="page-scroll" href="<c:url value="Demo"/>">Demo</a></li>
+
+<%--   <li><a class="page-scroll" href="<c:url value="/Demo"/>">Demo</a></li> --%> 
  
  
    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="<c:url value="productCustList"/>">Category<span class="caret"></span></a>

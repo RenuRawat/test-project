@@ -191,7 +191,7 @@ public ModelAndView orderSave(@Valid HttpServletRequest request)
 	String shipcity = request.getParameter("scity");
 	String shipstate = request.getParameter("sstate");
 	String shipcode = request.getParameter("spincode");
-	String shipcountry = request.getParameter("scountry");
+//	String shipcountry = request.getParameter("scountry");
 	
 	Orders ord=new Orders();
 //	ord.setOrderId(orderId);
@@ -203,7 +203,7 @@ public ModelAndView orderSave(@Valid HttpServletRequest request)
 	ord.setScity(shipcity);
 	ord.setSstate(shipstate);
 	ord.setSpincode(shipcode);
-	ord.setScountry(shipcountry);
+//	ord.setScountry(shipcountry);
 	
 	
 System.out.println("after list creation");

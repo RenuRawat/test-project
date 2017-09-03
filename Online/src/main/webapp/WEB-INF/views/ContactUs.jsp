@@ -9,6 +9,9 @@
 
     <title>Contact Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+     <link href="assets/mycss/Registration.css" rel="stylesheet">
+        
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");

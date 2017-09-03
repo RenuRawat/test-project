@@ -19,6 +19,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
+<!-- <style>
+body  {
+    background-image: url("images/B.jpg");
+   /*  background-color: #cccccc; */
+}
+</style> -->
+
+
 		
 	</head>
 <body>

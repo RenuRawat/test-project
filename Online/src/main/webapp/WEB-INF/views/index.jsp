@@ -11,21 +11,31 @@
   <title>GADGET Shop</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <!--  <link href="assets/mycss/background.css" rel="stylesheet"> -->
+  <link href="assets/mycss/index.css" rel="stylesheet">
+  <link href="assets/mycss/background.css" rel="stylesheet">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-    <link href="assets/mycss/product.css" rel="stylesheet">
+<!--   <style>
+body  {
+     height: 150%;
+    background-image: url("images/B.jpg");
+   /*  background-color: #cccccc; */
+}
+</style> -->
+  
+  
+    
 </head>
 <body>
 
 <jsp:include page="Header.jsp"></jsp:include>
 
 <br><br><br>
-<div class="container" style="width:80%;" "height:40px;" >
+<div class="container" style="width:100%;" "height:40px;" >
   
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -182,6 +192,7 @@
                             (15 reviews)
                         </div>
                         <h3 class="cost"><span class="glyphicon glyphicon-ind"></span>Rs: 14000 <small class="pre-cost"><span class="glyphicon glyphicon-ind"></span>Rs: 15000</small></h3>
+                        
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <select class="form-control" name="select">
@@ -201,14 +212,7 @@
                                 </select>
                             </div>   -->
                             <!-- end col -->
-                            <div class="col-md-4 col-sm-12">
-                                <select class="form-control" name="select">
-                                    <option value="" selected="">QTY</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
+                           
                             <!-- end col -->
                         </div>
                         <div class="space-ten"></div>
@@ -266,7 +270,7 @@
                                     <option value="">128GB</option>
                                 </select>
                             </div>   -->
-                            <!-- end col -->
+                            <!-- 
                             <div class="col-md-4 col-sm-12">
                                 <select class="form-control" name="select">
                                     <option value="" selected="">QTY</option>
@@ -275,7 +279,7 @@
                                     <option value="">3</option>
                                 </select>
                             </div>
-                            <!-- end col -->
+                            -->
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">
@@ -319,7 +323,7 @@
                                     <option value="white">White</option>
                                </select>
                             </div>
-                            <!-- end col -->
+                          
                            <!--   <div class="col-md-4 col-sm-6 col-xs-12">
                                 <select class="form-control" name="select">
                                     <option value="">Capacity</option>
@@ -328,8 +332,8 @@
                                     <option value="">64GB</option>
                                     <option value="">128GB</option>
                                 </select>
-                            </div>   -->
-                            <!-- end col -->
+                            </div>  
+                          
                             <div class="col-md-4 col-sm-12">
                                 <select class="form-control" name="select">
                                     <option value="" selected="">QTY</option>
@@ -337,8 +341,8 @@
                                     <option value="">2</option>
                                     <option value="">3</option>
                                 </select>
-                            </div>
-                            <!-- end col -->
+                            </div> -->
+                           
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">

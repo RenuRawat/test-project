@@ -33,122 +33,40 @@
 
 
 
-<%-- <fieldset>
-<c:set var="gtot" value="0"></c:set>
-<c:forEach var="c" items="${cart}">
-<c:set var="gtot" value="${gtot + c.cartPrice * c.cartQuantity }"></c:set>
-</c:forEach>
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="username">Customer Name</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="username">${orderDetails.sname}</label>
-</div>
-</div><br>
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="email">Customer Email Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="email">${orderDetails.email}</label>
-</div></div><br><br>
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.sadd1}</label>
-</div></div><br>
-
-
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.sadd2}</label>
-</div></div><br>
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.scity}</label>
-</div></div><br>
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.sstate}</label>
-</div></div><br>
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.spincode}</label>
-</div></div><br>
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Shipping Address</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${orderDetails.country}</label>
-</div></div><br>
-
-
-
-
-
-
-
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="address">Total Amount</label>
-<div class="col-md-4">
-<label class="col-md-4 control-label" for="address">${user.gtot}</label>
-</div></div><br>
-
-<div class="form-group">
-<label class="col-md-4 control-label" for="deliverydate">Date of Delivery</label>
-<div class="col-md-6">
-<label class="col-md-6 control-label" for="deliverydate">Delivery in 7 Working day</label>
-</div></div><br><br> --%>
-
-
-
-
-
-
-
-
-
-
-
-
 	    <div class="row color-invoice">
       <div class="col-md-10">
-       <label> #Sr. No: 78660</label>
+
+       <%-- <label> #Sr. No: ${st.count}</label> --%>
         <div class="row">
           <div class="col-lg-7 col-md-7 col-sm-7">
-           <label> <h1>INVOICE</h1></label>
-            <br />
-           <label> <strong>Email : </strong> renu.rawat09@gmail.com</label>
-            <br />
-        <label>    <strong>Call : </strong> +91-9876543211</label>
+           <h3><label> Customer Details : </label></h3>
+            <label>${orderDetails.username} </label>
+           <br> <label>${orderDetails.addressline1},&nbsp;${orderDetails.addressline2}</label>
+            <br><label> ${orderDetails.city}</label>,<label>&nbsp; ${orderDetails.state}</label>
+            
           </div>
           <div class="col-lg-5 col-md-5 col-sm-5">
-
-          <label>  <h2> GADGETs </h2> #814, Ballabgarh, Faridabad,</label>
-            <br><label> Pin- 121004,</label>
-            <br><label> Haryana.</label>
-
+       <h3>  <label>Customer Contact :</label></h3><label> Mob: ${orderDetails.phone}</label>
+            <br><label>${orderDetails.email}</label>
+            
+           
+         
+          
           </div>
         </div>
         <hr />
         <div class="row">
           <div class="col-lg-7 col-md-7 col-sm-7">
-           <label> <h3>Customer Details : </h3></label>
-            <h5><label>${orderDetails.username} </label>
-           <br> </h5><label>${orderDetails.addressline1}${orderDetails.addressline2}</label>
-            <br /><label> ${orderDetails.state}</label>
+          <h3> <label> Shipping Details : </label></h3>
+            <label>${order.sname} </label>
+           <br><label>${order.sadd1},&nbsp;${order.sadd2}</label>
+            <br /><label> ${order.scity}</label>,<label>&nbsp; ${order.sstate}</label>
           </div>
           <div class="col-lg-5 col-md-5 col-sm-5">
-         <label>   <h3>Customer Contact :</h3> Mob: ${orderDetails.phone}</label>
-            <br><label>${orderDetails.email}</label>
+        <h3>  <label>Contact :</label></h3><label> Mob: ${order.sphone}</label>
+            <br><label>${order.semail}</label>
            
-           <br><label>${order.sstate}</label>
-            <h3>${order.sname}</h3>
+          
           
           </div>
         </div>
@@ -201,10 +119,6 @@
 </tr></c:forEach>
 
 
-<%-- <tr>
-
-<td><span class="col-lg-9" align="right"><label>Grand Total</label><c:out value="${gtot }"></c:out></span></td>
-</tr> --%>
                 </tbody>
               </table>
             </div>
@@ -222,26 +136,26 @@
             <strong> Important: </strong>
             <ol>
               <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Only Exchange.
 
               </li>
               <li>
-                Nulla eros eros, laoreet non pretium sit amet, efficitur eu magna.
+                Only Exchange.
               </li>
               <li>
-                Curabitur efficitur vitae massa quis molestie. Ut quis porttitor justo, sed euismod tortor.
+                Only Exchange.
               </li>
             </ol>
           </div>
         </div> -->
         <hr />
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <a href="#" class="btn btn-success btn-sm">Print Invoice</a>    
-            <a href="#" class="btn btn-info btn-sm">Download In Pdf</a>
-            <a class="btn btn-primary btn-sm" href="${pageContext.request.contextPath }/cart/Thankyou" type="submit" name="invoice" > Ok </a>
+         <center><div class="col-lg-12 col-md-12 col-sm-12 ">
+       <!--      <a href="#" class="btn btn-success btn-sm">Print Invoice</a>    
+            <a href="#" class="btn btn-info btn-sm">Download In Pdf</a> -->
+            <a class="btn btn-primary btn-md" href="${pageContext.request.contextPath }/cart/Thankyou" type="submit" name="invoice" >ThankYou </a>
 
-          </div>
+          </div></center> 
         </div>
       </div>
     </div>
@@ -251,7 +165,7 @@
 
 
 
-</div></div></form></div></center></div>
+</div></div></div></form></div></center>
 
 
 
